@@ -267,44 +267,6 @@ Sometimes in a real work situation it is necessary to just get one solution and 
 
 I will remove the `console.log(n);` now, because it affects performance. It is OK to have it while developing/debugging, but it is ideal to remove before shipping the code (when the work is done).
 
-Sometimes, when I am working with the algorithm logic, I prefer to start with **Pseudocode**, so I don't have to worry about the sintax or language construction rules.
-
-Something like this:
-
-<pre>
-  let zeros = 0; // zero counter
-  let maxGap = 0; // max gap found
-
-  // convert input N to bin
-  let n = ConvertToBinary(N);
-
-  // example:
-  // N = 5 (decimal) => n = 101 (binary)
-  // so
-  // n[0] = 1
-  // n[1] = 0
-  // n[2] = 1
-
-  // loop through all binary digits
-  for x = 0 to n.length:
-    if x == 0 then
-      // n[0] = 1 first digit
-      skip // do nothing
-    end if
-    if x > 0 then
-      // second digit and on
-      // check if is 0
-      if n[x] == 0 then // it is a 0 gap
-        // increase out counter
-        zeros++
-      end if
-      // save the maxGap number
-      maxGap = zeros
-    end if
-  next x
-  return maxGap
-</pre>
-
 Assuming there are no trailing 0's, all numbers will start with 1 (see table above column 'bin').
 In this case, if the converted binary number can be acessed as an array, I can use an index/array sintax:
 
@@ -414,4 +376,47 @@ Ran all test suites.
 
 And we have a solution!
 
+Now I can start improving the solution, cleaning up the code, adding more tests.
 
+
+### Suggestions
+
+Sometimes, when I am working with the algorithm logic, I prefer to start with **Pseudocode**, so I don't have to worry about the sintax or language construction rules.
+
+Something like this:
+
+<pre>
+  let zeros = 0; // zero counter
+  let maxGap = 0; // max gap found
+
+  // convert input N to bin
+  let n = ConvertToBinary(N);
+
+  // example:
+  // N = 5 (decimal) => n = 101 (binary)
+  // so
+  // n[0] = 1
+  // n[1] = 0
+  // n[2] = 1
+
+  // loop through all binary digits
+  for x = 0 to n.length:
+    if x == 0 then
+      // n[0] = 1 first digit
+      skip // do nothing
+    end if
+    if x > 0 then
+      // second digit and on
+      // check if is 0
+      if n[x] == 0 then // it is a 0 gap
+        // increase out counter
+        zeros++
+      end if
+      // save the maxGap number
+      maxGap = zeros
+    end if
+  next x
+  return maxGap
+</pre>
+
+Then it is easier later to find the correct sintax fro the language I am using.

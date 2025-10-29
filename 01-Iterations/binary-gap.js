@@ -14,10 +14,10 @@ module.exports = function solution(n) {
 
 	// now iterate over the 0's and 1's and count
 	for (var x = 0; x < n.length; x++) {
-		if (n[x] == 0) {
+		if (n[x] == 0) { // means it is a 0 gap
 			zeros++;
-		} else {
-			if (zeros > maxGap){
+		} else { // (n[x] == 1) means that the gap ended
+			if (zeros > maxGap) {
 				maxGap = zeros;
 			}
 			zeros = 0;
