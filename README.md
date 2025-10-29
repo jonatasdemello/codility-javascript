@@ -265,51 +265,153 @@ I usually work with multiple languages and environments (C#, C, C++, Python, Jav
 But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
 Sometimes in a real work situation it is necessary to just get one solution and apply it, insted of reinventing the wheel and creating your own solution. Viewer discretion is advised.
 
-I will remove the `console.log(n);` now, because it affects performance.
+I will remove the `console.log(n);` now, because it affects performance. It is OK to have it while developing/debugging, but it is ideal to remove before shipping the code (when the work is done).
 
-For the main loop, I prefer to start with **Pseudocode**, so I don't have to worry about the sintax or language construction rules.
+Sometimes, when I am working with the algorithm logic, I prefer to start with **Pseudocode**, so I don't have to worry about the sintax or language construction rules.
+
+Something like this:
+
+<pre>
+  let zeros = 0; // zero counter
+  let maxGap = 0; // max gap found
+
+  // convert input N to bin
+  let n = ConvertToBinary(N);
+
+  // example:
+  // N = 5 (decimal) => n = 101 (binary)
+  // so
+  // n[0] = 1
+  // n[1] = 0
+  // n[2] = 1
+
+  // loop through all binary digits
+  for x = 0 to n.length:
+    if x == 0 then
+      // n[0] = 1 first digit
+      skip // do nothing
+    end if
+    if x > 0 then
+      // second digit and on
+      // check if is 0
+      if n[x] == 0 then // it is a 0 gap
+        // increase out counter
+        zeros++
+      end if
+      // save the maxGap number
+      maxGap = zeros
+    end if
+  next x
+  return maxGap
+</pre>
 
 Assuming there are no trailing 0's, all numbers will start with 1 (see table above column 'bin').
-In this case, if our converted binary number can be acessed as an array, I can say:
+In this case, if the converted binary number can be acessed as an array, I can use an index/array sintax:
 
-<pre>
-let zeros = 0; // zero counter
-let maxGap = 0; // max gap found
-// convert input N to bin
-let n = ConvertToBinary(N);
+```
+  N = 5 (decimal)
+  n = 101 (binary)
+so
+  n[0] = 1
+  n[1] = 0
+  n[2] = 1
+```
 
-// example:
-// N = 5 (decimal) => n = 101 (binary)
-// so
-// n[0] = 1
-// n[1] = 0
-// n[2] = 1
+Next, I will iterate over the binary digits and count the ones that are 0:
 
-// loop through all binary digits
-for x = 0 to n.length:
-  if x == 0 then // n[0] = 1 first digit
-    skip // do nothing
-  end if
-  if x > 0 then // second digit and on
-    // check if is 0
-    if n[x] == 0 then // it is a 0 gap
-      // increase out counter
-      zeros++
-    else
-      // n[x] == 1 means the gap ended
-      // check if the last gap was the biggest found
-      if (zeros > maxGap) then
-        // ave the biggest gap
-        maxGap = zeros
-      end if
-      // reset current count
-      zeros = 0
-    end if
-  end if
-next x
-return maxGap
+```js
+	// now iterate over the 0's and 1's and count
+	for (var x = 0; x < n.length; x++) {
+		if (n[x] == 0) {
+			zeros++;
+		}
+	}
+	maxGap = zeros;
+	return maxGap;
+```
 
-// now test with
-// 111
-// 100
-<pre>
+Run the tests again:
+
+```js
+ FAIL  01-Iterations/binary-gap.test.js
+  BinaryGap Tests
+    √ Given -10 should return 0. (2 ms)
+    √ Given 0 [0000] should return 0.
+    √ Given 2,147,483,648 should return 0. (1 ms)
+    √ Given 1 [0001] should return 0. (1 ms)
+    √ Given 2147483647 [0111.1111.1111.1111.1111.1111.1111.1111] should return 0. (1 ms)
+    √ Given 9 [1001] should return 2. (1 ms)
+    × Given 529 [1000010001] should return 4. (2 ms)
+    × Given 20 [10100] should return 1.
+    √ Given 15 [1111] should return 0. (5 ms)
+    × Given 32 [100000] should return 0. (1 ms)
+
+  ● BinaryGap Tests › Given 529 [1000010001] should return 4.
+    Expected: 4
+    Received: 7
+
+  ● BinaryGap Tests › Given 20 [10100] should return 1.
+    Expected: 1
+    Received: 3
+
+  ● BinaryGap Tests › Given 32 [100000] should return 0.
+    Expected: 0
+    Received: 5
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 7 passed, 10 total
+Snapshots:   0 total
+Time:        0.499 s, estimated 1 s
+```
+
+This is interesting, the failed tests tell me that the returned value is wrong when
+I have more than 2 gaps [1000010001] and [10100]
+or when there is no 1 closing the last gap [100000].
+
+To fix that I will need to modify my main loop and add some more checks.
+I need to check for 1's too (closing gap).
+
+```js
+	// now iterate over the 0's and 1's and count
+	for (var x = 0; x < n.length; x++) {
+		if (n[x] == 0) { // means that there is gap
+			zeros++;
+		}
+		if (n[x] == 1) { // means that the gap ended
+			// if the gap ended, check if this is biggest found
+			if (zeros > maxGap) {
+				maxGap = zeros;
+			}
+			// reset the zero counter
+			zeros = 0;
+		}
+	}
+	return maxGap;
+```
+
+Run the tests again:
+
+```js
+ PASS  01-Iterations/binary-gap.test.js
+  BinaryGap Tests
+    √ Given -10 should return 0. (3 ms)
+    √ Given 0 [0000] should return 0.
+    √ Given 2,147,483,648 should return 0. (1 ms)
+    √ Given 1 [0001] should return 0.
+    √ Given 2147483647 [0111.1111.1111.1111.1111.1111.1111.1111] should return 0.
+    √ Given 9 [1001] should return 2.
+    √ Given 529 [1000010001] should return 4.
+    √ Given 20 [10100] should return 1.
+    √ Given 15 [1111] should return 0. (1 ms)
+    √ Given 32 [100000] should return 0. (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        0.439 s, estimated 1 s
+Ran all test suites.
+```
+
+And we have a solution!
+
+
