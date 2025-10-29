@@ -5,16 +5,16 @@ For this I will use the [Codility Developer Trining](https://app.codility.com/pr
 Please go ahead and create an account there and start exploring.
 
 In the process of learning or during a coding interview, the process (how) is much more important than the result itself.
-If I only needed a solution I could simple Google it or use AI.
+If I only needed a solution I could simply Google it or use AI.
 Your final solution may not even be complete, but through multiple iterations it can always be improved.
-There are may ways to solve a problem (as you will see if you look for solutions on the Internet).
-In areal world scenario, the solution may not be easily available and some exploration and thinking may be necessary.
+There are many ways to solve a problem (as you will see if you look for solutions on the Internet).
+In a real world scenario, the solution may not be easily available, and some exploration and thinking may be necessary.
 
 I will take a step-by-step approach showing the steps that any interviewer would like to see, providing explanations along the way.
-In order to solve any problem you need to undertand it first. Then take gradual iteratuions, sometimes by trial and error, until a solution is achieved.
+In order to solve any problem, you need to understand it first. Then take gradual iterations, sometimes by trial and error, until a solution is achieved.
 This is how things work in a company or the real world.
 
-For the purpose of this exercise, I will use JavaScript since it is one of the most popular languagues and requires less setup and tools.
+For the purpose of this exercise, I will use JavaScript since it is one of the most popular languages and requires less setup and tools.
 Maybe later I will expand it to other languages like C# or Python.
 I like to do this exercise to learn other languages or understand how it works.
 
@@ -22,6 +22,30 @@ I will use the Test Driven Development (TDD) approach, writing the tests first t
 This allows for more experimentation and helps with correctness.
 The Codility tool will generate a suite of tests to validate the solution, but I can start with the information provided in the problem description.
 Codility also has a timer, which I don't like - so running it locally can be less stressful.
+
+## Lessons
+
+In this page I will only address the first lesson.
+Check each lesson for more details.
+
+- [Lesson-01 - Iterations](01-Iterations\Lesson-01-Iterations.md)
+- [Lesson-02 - Arrays](02-Arrays\Lesson-02-Arrays.md)
+- [Lesson-03 - Time Complexity](03-Time-Complexity\Lesson-03-Time_Complexity.md)
+- [Lesson-04 - Counting Elements](04-Counting-Elements\Lesson-04-Counting_Elements.md)
+- [Lesson-05 - Prefix Sums](05-Prefix-Sums\Lesson-05-Prefix_Sums.md)
+- [Lesson-06 - Sorting](06-Sorting\Lesson-06-Sorting.md)
+- [Lesson-07 - Stacks and Queues](07-Stacks-and-Queues\Lesson-07-Stacks_and_Queues.md)
+- [Lesson-08 - Leader](08-Leader\Lesson-08-Leader.md)
+- [Lesson-09 - Maximum slice problem](09-Maximum-Slice-Problem\Lesson-09-Maximum_slice_problem.md)
+- [Lesson-10 - Prime and composite numbers](10-Prime-and-Composite-Numbers\Lesson-10-Prime_and_composite_numbers.md)
+- [Lesson-11 - Sieve of Eratosthenes](11-Sieve-of-Eratosthenes\Lesson-11-Sieve_of_Eratosthenes.md)
+- [Lesson-12 - Euclidean algorithm](12-Euclidean-Algorithm\Lesson-12-Euclidean_algorithm.md)
+- [Lesson-13 - Fibonacci numbers](13-Fibonacci-Nnumbers\Lesson-13-Fibonacci_numbers.md)
+- [Lesson-14 - Binary search algorithm](14-Binary-Search-Algorithm\Lesson-14-Binary_search_algorithm.md)
+- [Lesson-15 - Caterpillar method](15-Caterpillar-Method\Lesson-15-Caterpillar_method.md)
+- [Lesson-16 - Greedy algorithms](16-Greedy-Algorithms\Lesson-16-Greedy_algorithms.md)
+- [Lesson-17 - Dynamic programming](17-Dynamic-Programming\Lesson-17-Dynamic_programming.md)
+
 
 
 ## Setup
@@ -113,7 +137,10 @@ describe('BinaryGap Tests', () => {
 ## Adding Unit Tests
 
 Each test case will be added based on the instructions provided in the problem description.
-Feel free to add more, start simple and add more ad you go and look for edge cases or potential issues. I will start with these items and add some extra tests:
+Feel free to add more, start simple and add more as you go and look for edge cases or potential issues.
+It is good to also add cases outside the scope or boundaries too.
+
+I will start with these items and add some extra tests:
 
 - The number 9 has binary representation 1001 and contains a binary gap of length 2.
 - The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3.
@@ -160,13 +187,13 @@ Note: I added more tests for the min and max range and also more test numbers. T
 
 Now it is time to start writing the code.
 
-Note that I don't have a "main" or "index" as an application entrypoint calling the **solution(N)** function.
-This is intented. If I run `npm start` I will get an error.
+Note that I don't have a "main" or "index" as an application entry point calling the **solution(N)** function.
+This is intended. If I run `npm start` I will get an error.
 I want to test my function in isolation, provide multiple inputs and evaluate the results.
 This would be more difficult and time consuming to do without a test framework.
 
-With the tests in place, I can now start writting the code to solve the problem.
-I may even go back later and add more test (for other uses cases), but for now this is enough.
+With the tests in place, I can now start writing the code to solve the problem.
+I may even go back later and add more tests (for other uses cases), but this is enough for now.
 
 The first thing I will do is to add some validations to the **solution(N)** function in the `binary-gap.js` file.
 
@@ -221,7 +248,7 @@ Now I have some progress and 3 tests as passing!
 
 Next, I will start the problem/solution logic.
 First thing to consider is that my input number is a decimal number.
-I need to convert it to it's binary representation:
+I need to convert it to its binary representation:
 
 In JavaScript, the simplest and most common method to convert a decimal number to its binary representation is by using the built-in toString() method with a radix of 2.
 
@@ -249,7 +276,7 @@ And run the tests again.
 
 Notice that I added the `console.log(n);` after the conversion.
 The reason for that is to see what the result is.
-This is important because depending on (the language or) the result returned from the binary convertion function, I may need to remove the trailing zeros before.
+This is important because depending on (the language or) the result returned from the binary conversion function, I may need to remove the trailing zeros before.
 
 
 | dec | bin    | bytes |
@@ -260,15 +287,18 @@ This is important because depending on (the language or) the result returned fro
 | 9   |   1001 |  1001 |
 | 32  | 100000 |  0010.0000 |
 
-**Disclaimer Note:** here is one situation where it is OK to do a Google search.
-I usually work with multiple languages and environments (C#, C, C++, Python, JavaScript, PowerShell, T-SQL, TypeScript just to name a few) and there is no way to know all the sintaxes and parameters for all languages and functions.
-But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
-Sometimes in a real work situation it is necessary to just get one solution and apply it, insted of reinventing the wheel and creating your own solution. Viewer discretion is advised.
+**Disclaimer Note:**
+
+> Here is one situation where it is OK to do a Google search.
+> I usually work with multiple languages and environments (C#, C, C++, Python, JavaScript, PowerShell, T-SQL, TypeScript just to name a few) and there is no way to know all the syntaxes and parameters for all languages and functions.
+>
+> But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
+> Sometimes in a real work situation it is necessary to just get one solution and apply it, instead of reinventing the wheel and creating your own solution. Viewer discretion is advised.
 
 I will remove the `console.log(n);` now, because it affects performance. It is OK to have it while developing/debugging, but it is ideal to remove before shipping the code (when the work is done).
 
-Assuming there are no trailing 0's, all numbers will start with 1 (see table above column 'bin').
-In this case, if the converted binary number can be acessed as an array, I can use an index/array sintax:
+Assuming there is no trailing 0's, all numbers will start with 1 (see table above column 'bin').
+In this case, if the converted binary number can be accessed as an array, I can use an index/array syntax:
 
 ```
   N = 5 (decimal)
@@ -381,7 +411,7 @@ Now I can start improving the solution, cleaning up the code, adding more tests.
 
 ### Suggestions
 
-Sometimes, when I am working with the algorithm logic, I prefer to start with **Pseudocode**, so I don't have to worry about the sintax or language construction rules.
+Sometimes, when I am working with the algorithm logic, I prefer to start with **Pseudocode**, so I don't have to worry about the syntax or language construction rules.
 
 Something like this:
 
@@ -419,4 +449,4 @@ Something like this:
   return maxGap
 </pre>
 
-Then it is easier later to find the correct sintax fro the language I am using.
+Then it is easier later to find the correct syntax for the language I am using.
