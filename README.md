@@ -1,7 +1,8 @@
-# Codility Lessons
+# Codility Lessons Using TDD
 
 The goal of this project is to show how to solve coding problems using TDD.
-For this I will use the [Codility Developer Trining](https://app.codility.com/programmers/) site lessons.
+
+For this I will use the [Codility Developer Training](https://app.codility.com/programmers/) site lessons.
 Please go ahead and create an account there and start exploring.
 
 In the process of learning or during a coding interview, the process (how) is much more important than the result itself.
@@ -26,7 +27,7 @@ Codility also has a timer, which I don't like - so running it locally can be les
 ## Lessons
 
 In this page I will only address the first lesson.
-Check each lesson for more details.
+Check each lesson below for more details and other problems.
 
 - [Lesson-01 - Iterations](01-Iterations/Lesson-01-Iterations.md)
 - [Lesson-02 - Arrays](02-Arrays/Lesson-02-Arrays.md)
@@ -46,23 +47,23 @@ Check each lesson for more details.
 - [Lesson-16 - Greedy algorithms](16-Greedy-Algorithms/Lesson-16-Greedy_algorithms.md)
 - [Lesson-17 - Dynamic programming](17-Dynamic-Programming/Lesson-17-Dynamic_programming.md)
 
-
-
 ## Setup
 
-First, I need to install the tools. If you still don't have it, install:
+First, install the development tools. If you still don't have it, please install:
 
 - Node.JS (any LTS version is good).
 - Visual Studio Code (or any other IDE that you like, even Notepad++ will do).
 
-I will create a new project and install [Jest](https://jestjs.io/) to run the tests
-(you can use Mocha or Jasmine if you like). Open the console or terminal and type (inside the project folder):
+I decided to use Node.JS and JavaScript so it can run on Mac, Windows or Linux. Also there is less overhead to rebuild the app to test changes.
+
+Next, I create a new project and install [Jest](https://jestjs.io/) to run the tests
+(you can use Mocha or Jasmine if you like). Open the console or terminal, create a new folder for the project and then type (inside the project folder):
 
 `npm init --yes`
 
 `npm install --save-dev jest`
 
-Modify the `package.json` file to run the tests:
+Then modify the `package.json` file to run the tests:
 
 ```js
 "scripts": {
@@ -73,7 +74,6 @@ Modify the `package.json` file to run the tests:
 Then you can run the tests with:
 
 `npm test`
-
 
 Next, create sub-folders, one for each lesson (to make it easy to find and keep it organized):
 
@@ -98,9 +98,9 @@ mkdir 17-Dynamic-Programming
 ```
 
 I will start with the first lesson (warm-up), but the setup process will be the same for all.
-The first lesson is "Iterations" and the task is "Binary Gap", so create 2 files in the "01-Iterations" folder:
+The first lesson is "Iterations" and the task is "Binary Gap", so I created 2 files in the "01-Iterations" folder:
 
-The first file is the code (solution), I will call "binary-gap.js":
+The first file is the code (solution) itself and it is called **"binary-gap.js"**:
 
 ```js
 // binary-gap.js
@@ -111,8 +111,8 @@ module.exports = function solution(n) {
   return maxGap;
 }
 ```
-Next, create the test suite for this solution, I will call "binary-gap.test.js":
 
+The other file is the test suite for this problem, which is called **"binary-gap.test.js"**:
 
 ```js
 // binary-gap.test.js
@@ -134,13 +134,14 @@ describe('BinaryGap Tests', () => {
 
 });
 ```
+
 ## Adding Unit Tests
 
 Each test case will be added based on the instructions provided in the problem description.
 Feel free to add more, start simple and add more as you go and look for edge cases or potential issues.
 It is good to also add cases outside the scope or boundaries too.
 
-I will start with these items and add some extra tests:
+I will start with these requirements and add some extra tests too:
 
 - The number 9 has binary representation 1001 and contains a binary gap of length 2.
 - The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3.
@@ -180,15 +181,14 @@ Snapshots:   0 total
 Time:        0.444 s, estimated 1 s
 ```
 
-Note: I added more tests for the min and max range and also more test numbers. This is available in the folder. This is why the test results show more tests.
-
+**Note:** I added more tests for the min and max range and also some other test numbers. This is available in the lesson folder. This is why the test results show more items than the above results.
 
 ## Write Some Code
 
 Now it is time to start writing the code.
 
 Note that I don't have a "main" or "index" as an application entry point calling the **solution(N)** function.
-This is intended. If I run `npm start` I will get an error.
+This is intended and if I run `npm start` I will get an error.
 I want to test my function in isolation, provide multiple inputs and evaluate the results.
 This would be more difficult and time consuming to do without a test framework.
 
@@ -201,7 +201,7 @@ Provided that I have this statement in the problem description:
 
 >  N is an integer within the range [1 .. 2,147,483,647].
 
-I will add the first check:
+I can add the first check:
 
 ```js
 module.exports = function solution(n) {
@@ -246,13 +246,17 @@ Time:        0.512 s, estimated 1 s
 
 Now I have some progress and 3 tests as passing!
 
+The first 3 tests will check for numbers outside the scope (invalid inputs).
+
 Next, I will start the problem/solution logic.
-First thing to consider is that my input number is a decimal number.
-I need to convert it to its binary representation:
+
+
+The first thing to consider is that my input number is a decimal number.
+I need to convert it to its binary representation.
 
 In JavaScript, the simplest and most common method to convert a decimal number to its binary representation is by using the built-in toString() method with a radix of 2.
 
-Javascript Number.prototype.toString() reference at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+See Javascript Number.prototype.toString() reference at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 
 ```js
 module.exports = function solution(n) {
@@ -274,36 +278,37 @@ module.exports = function solution(n) {
 
 And run the tests again.
 
-Notice that I added the `console.log(n);` after the conversion.
+Note that I added the `console.log(n);` after the conversion.
 The reason for that is to see what the result is.
-This is important because depending on (the language or) the result returned from the binary conversion function, I may need to remove the trailing zeros before.
+This is important because depending on (the language or) the result returned from the binary conversion function, I may need to remove the trailing zeros (they can be discared).
 
-
-| dec | bin    | bytes |
-|-----|--------|-------|
-| 1   |      1 |  0001 |
-| 5   |    101 |  0101 |
-| 7   |    111 |  0111 |
-| 9   |   1001 |  1001 |
-| 32  | 100000 |  0010.0000 |
+| dec | bin    | bytes     |
+| --- | ------ | --------- |
+| 1   | 1      | 0001      |
+| 5   | 101    | 0101      |
+| 7   | 111    | 0111      |
+| 9   | 1001   | 1001      |
+| 32  | 100000 | 0010.0000 |
 
 **Disclaimer Note:**
 
 > Here is one situation where it is OK to do a Google search.
 > I usually work with multiple languages and environments (C#, C, C++, Python, JavaScript, PowerShell, T-SQL, TypeScript just to name a few) and there is no way to know all the syntaxes and parameters for all languages and functions.
->
+> 
 > But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
 > Sometimes in a real work situation it is necessary to just get one solution and apply it, instead of reinventing the wheel and creating your own solution. Viewer discretion is advised.
 
 I will remove the `console.log(n);` now, because it affects performance. It is OK to have it while developing/debugging, but it is ideal to remove before shipping the code (when the work is done).
 
-Assuming there is no trailing 0's, all numbers will start with 1 (see table above column 'bin').
+
+
+Assuming there is no trailing 0's, all numbers will start with 1 (see table above, column 'bin').
 In this case, if the converted binary number can be accessed as an array, I can use an index/array syntax:
 
 ```
   N = 5 (decimal)
   n = 101 (binary)
-so
+then
   n[0] = 1
   n[1] = 0
   n[2] = 1
@@ -312,14 +317,14 @@ so
 Next, I will iterate over the binary digits and count the ones that are 0:
 
 ```js
-	// now iterate over the 0's and 1's and count
-	for (var x = 0; x < n.length; x++) {
-		if (n[x] == 0) {
-			zeros++;
-		}
-	}
-	maxGap = zeros;
-	return maxGap;
+    // now iterate over the 0's and 1's and count
+    for (var x = 0; x < n.length; x++) {
+        if (n[x] == 0) {
+            zeros++;
+        }
+    }
+    maxGap = zeros;
+    return maxGap;
 ```
 
 Run the tests again:
@@ -364,21 +369,21 @@ To fix that I will need to modify my main loop and add some more checks.
 I need to check for 1's too (closing gap).
 
 ```js
-	// now iterate over the 0's and 1's and count
-	for (var x = 0; x < n.length; x++) {
-		if (n[x] == 0) { // means that there is gap
-			zeros++;
-		}
-		if (n[x] == 1) { // means that the gap ended
-			// if the gap ended, check if this is biggest found
-			if (zeros > maxGap) {
-				maxGap = zeros;
-			}
-			// reset the zero counter
-			zeros = 0;
-		}
-	}
-	return maxGap;
+    // now iterate over the 0's and 1's and count
+    for (var x = 0; x < n.length; x++) {
+        if (n[x] == 0) { // means that there is gap
+            zeros++;
+        }
+        if (n[x] == 1) { // means that the gap ended
+            // if the gap ended, check if this is biggest found
+            if (zeros > maxGap) {
+                maxGap = zeros;
+            }
+            // reset the zero counter
+            zeros = 0;
+        }
+    }
+    return maxGap;
 ```
 
 Run the tests again:
@@ -407,7 +412,6 @@ Ran all test suites.
 And we have a solution!
 
 Now I can start improving the solution, cleaning up the code, adding more tests.
-
 
 ### Suggestions
 
