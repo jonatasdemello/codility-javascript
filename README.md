@@ -97,8 +97,13 @@ mkdir 16-Greedy-Algorithms
 mkdir 17-Dynamic-Programming
 ```
 
-I will start with the first lesson (warm-up), but the setup process will be the same for all.
-The first lesson is "Iterations" and the task is "Binary Gap", so I created 2 files in the "01-Iterations" folder:
+Now I am ready to starting solving some problems using TDD.
+Here I will start with the first lesson (warm-up), but the setup process will be the same for all.
+
+## Solution
+
+The first lesson is "Iterations" and the task is "Binary Gap".
+I created 2 files in the "01-Iterations" folder:
 
 The first file is the code (solution) itself and it is called **"binary-gap.js"**:
 
@@ -294,7 +299,7 @@ This is important because depending on (the language or) the result returned fro
 
 > Here is one situation where it is OK to do a Google search.
 > I usually work with multiple languages and environments (C#, C, C++, Python, JavaScript, PowerShell, T-SQL, TypeScript just to name a few) and there is no way to know all the syntaxes and parameters for all languages and functions.
-> 
+>
 > But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
 > Sometimes in a real work situation it is necessary to just get one solution and apply it, instead of reinventing the wheel and creating your own solution. Viewer discretion is advised.
 
