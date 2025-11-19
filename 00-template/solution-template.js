@@ -5,7 +5,8 @@ module.exports = function solution(n) {
 
 	// validations
 	if (n < 1 || n > 2147483647) {
-		return 0;
+		throw new Error("Parameter is invalid!");
 	}
+
 	return result;
 }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "testw": "jest --watchAll --verbose",
+    "testv": "jest --verbose"
   },
   "engines" : {
     "node" : ">=8.0.0"

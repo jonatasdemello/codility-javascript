@@ -7,12 +7,12 @@
 // that is surrounded by ones at both ends in the binary representation of N.
 
 module.exports = function solution(N) {
+	var maxGap = -1;
 	var zeros = 0;
-	var maxGap = 0;
 
 	// validations
 	if (N < 1 || N > 2147483647) {
-		return 0;
+		throw new Error("Parameter is invalid!");
 	}
 
 	// first, convert the number to binary

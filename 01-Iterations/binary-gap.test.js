@@ -5,22 +5,32 @@ const solution = require("./binary-gap");
 describe('BinaryGap Tests', () => {
 
   // valid input: negative number
-  test('Given -10 should return 0.', () => {
-    expect(solution(-10)).toBe(0);
-  });
-  // valid input: zero
-  test('Given 0 [0000] should return 0.', () => {
-    expect(solution(0)).toBe(0);
-  });
-  // valid input: big number
-  test('Given 2,147,483,648 should return 0.', () => {
-    expect(solution(2147483648)).toBe(0);
+  test('Given -1 should throw an error.', () => {
+    expect(() => {
+          solution(-1);
+        }).toThrow();
   });
 
-  // extremes: N is an integer within the range [1..2,147,483,647].
+  // valid input: zero
+  test('Given 0 should throw an error.', () => {
+    expect(() => {
+          solution(0);
+        }).toThrow();
+  });
+
+  // valid input: big number
+  test('Given 2,147,483,648 should throw an error.', () => {
+    expect(() => {
+          solution(2147483648);
+        }).toThrow();
+  });
+
+  // valid input boundary: 1
   test('Given 1 [0001] should return 0.', () => {
     expect(solution(1)).toBe(0);
   });
+
+  // valid input boundary: 2,147,483,647
   test('Given 2147483647 [0111.1111.1111.1111.1111.1111.1111.1111] should return 0.', () => {
     expect(solution(2147483647)).toBe(0);
   });
@@ -51,11 +61,10 @@ describe('BinaryGap Tests', () => {
   test('Given 32 [0010.0000] should return 0.', () => {
     expect(solution(32)).toBe(0);
   });
-
-  // test other numbers:
   test('Given 1041 [0100.0001.0001] should return 5.', () => {
     expect(solution(1041)).toBe(5);
   });
+
   test('Given 64 [0100.0000] should return 0.', () => {
     expect(solution(64)).toBe(0);
   });
