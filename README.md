@@ -169,11 +169,9 @@ Ran all test suites.
 
 Here I have one Test Suite defined wth "describe()" and one unit test defined with "test()".
 
-
 ## The Problem
 
 The fist lesson/problem to solve is called **BinaryGap** and below is the full description copied from [Codility](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) web site.
-
 
 -------------------
 
@@ -210,7 +208,6 @@ Write an efficient algorithm for the following assumptions:
 
 -------------------
 
-
 ## Logical Thinking in Programming
 
 Before starting to write a solution for any problem it is necessary to better understand it first.
@@ -219,12 +216,10 @@ The urge to start writing code is strong.
 I found the quotes below (don't ask me about the historical accuracy, focus on the idea instead):
 
 > "If I had an hour to solve a problem I’d spend 55 minutes thinking about the problem and 5 minutes thinking about solutions" - Albert Einstein
->
+> 
 > "Give me six hours to chop down a tree and I will spend the first four sharpening the axe" - Abraham Lincoln
->
+> 
 > "A problem well defined is a problem half solved" - Dan Martell
-
-
 
 Logical thinking involves using systematic reasoning to solve problems efficiently.
 In programming, this means applying clear, structured thought processes to debugging, algorithm optimization, and feature design tasks.
@@ -306,7 +301,6 @@ TDD is called Test Driven Development, which means the development is driven by 
 
 The process follows a cycle called "Red-Green-Refactor": write a failing test (Red), write just enough code for the test to pass (Green), and then clean up the code while ensuring tests remain green (Refactor). This iterative approach helps create higher-quality, more maintainable code by ensuring every new piece of functionality is built upon a passing test.
 
-
 Based on the instructions provided in the problem description, I can start adding the test cases.
 
 Feel free to add more, start simple and add more as you go and look for edge cases or potential issues.
@@ -322,9 +316,6 @@ Starting with the requirements from the problem description:
 - Given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
 - Given N = 32 the function should return 0, because N has binary representation '100000' and thus no binary gaps.
 
-
-
-
 The test syntax is pretty straightfoward, but in doubt check the [Jest documentation](https://jestjs.io/docs/getting-started).
 
 The problem description does not say anything error, so I will assume that invalid parameter will throw an error.
@@ -332,7 +323,6 @@ The problem description does not say anything error, so I will assume that inval
 The first tests will cover boundaries and invalid numbers from this statement in the problem description:
 
 >  N is an integer within the range [1 .. 2,147,483,647].
-
 
 ```js
 // binary-gap.test.js
@@ -372,7 +362,6 @@ describe('BinaryGap Tests', () => {
   test('Given 2147483647 [0111.1111.1111.1111.1111.1111.1111.1111] should return 0.', () => {
     expect(solution(2147483647)).toBe(0);
   });
-
 ```
 
 After adding the test cases to `binary-gap.test.js`, run the tests with:
@@ -411,8 +400,6 @@ The `binary-gap.tests.js` has 1 test suite and 5 unit tests - all failing.
 
 A total of 2 test suites and 7 unit tests.
 
-
-
 With the validations and boundaries in place, I can add more tests using the requirements in the problem description.
 Lets check some other numbers. These will be valid input numbers that should return valid output results.
 For example: 9, 529, 20, 15, 32, 1041.
@@ -422,7 +409,6 @@ In the test name, I added the converted binary number inside the backets to make
 Here are the unit tests:
 
 ```js
-
   // valid input boundary: 1
   test('Given 1 [0001] should return 0.', () => {
     expect(solution(1)).toBe(0);
@@ -486,7 +472,6 @@ Tests:       11 failed, 2 passed, 13 total
 Snapshots:   0 total
 Time:        0.725 s, estimated 1 s
 ```
-
 
 ## Write Some Code
 
@@ -634,8 +619,6 @@ In summary: the test received the input parameter "1" and expected the result to
 The output will show where the **unit test** failed, not the functional code (there is no code yet!).
 So the first thing to do is look at this condition and write the functional code to fix this test.
 
-
-
 ### Problem Logic
 
 Note that I added the `console.log(bin);` after the conversion.
@@ -654,7 +637,7 @@ This is important because depending on the language or the result returned from 
 
 > Here is one situation where it is OK to do a Google search.
 > I usually work with multiple languages and environments (C#, C, C++, Python, JavaScript, PowerShell, T-SQL, TypeScript just to name a few) and there is no way to know all the syntaxes and parameters for all languages and functions.
->
+> 
 > But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
 > Sometimes in a real work situation it is necessary to just get one solution and apply it, instead of reinventing the wheel and creating your own solution. Viewer discretion is advised.
 
@@ -677,7 +660,6 @@ Algorithm:
 
 - convert the decimal number to binary
 - iterate over the binary digits counting the 0's
-
 
 Next, I will iterate over the binary digits and count the 0's.
 I added a new variable `zeros = 0` to hold the count of 0's.
@@ -826,7 +808,6 @@ Snapshots:   0 total
 Time:        0.882 s, estimated 1 s
 Ran all test suites related to changed files
 ```
-
 
 ### Suggestions
 

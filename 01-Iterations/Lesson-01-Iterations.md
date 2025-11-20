@@ -1,9 +1,11 @@
 ### Lesson-01 - Iterations
+
 ---------------------------------------------------------------------------------------------------
 
 https://app.codility.com/programmers/lessons/1-iterations/
 
 ---------------------------------------------------------------------------------------------------
+
 [easy]
 
 ### BinaryGap
@@ -194,7 +196,6 @@ The first 3 tests will check for numbers outside the scope (invalid inputs).
 
 Next, I will start the problem/solution logic.
 
-
 The first thing to consider is that my input number is a decimal number.
 I need to convert it to its binary representation.
 
@@ -238,13 +239,11 @@ This is important because depending on (the language or) the result returned fro
 
 > Here is one situation where it is OK to do a Google search.
 > I usually work with multiple languages and environments (C#, C, C++, Python, JavaScript, PowerShell, T-SQL, TypeScript just to name a few) and there is no way to know all the syntaxes and parameters for all languages and functions.
->
+> 
 > But there is a difference between asking "how to convert decimal to binary in JavaScript" to "give me the solution to this problem so I can copy it".
 > Sometimes in a real work situation it is necessary to just get one solution and apply it, instead of reinventing the wheel and creating your own solution. Viewer discretion is advised.
 
 I will remove the `console.log(bin);` now, because it affects performance. It is OK to have it while developing/debugging, but it is ideal to remove before shipping the code (when the work is done).
-
-
 
 Assuming there is no trailing 0's, all numbers will start with 1 (see table above, column 'bin').
 In this case, if the converted binary number can be accessed as an array, I can use an index/array syntax:
