@@ -1,6 +1,6 @@
 # Cyclic Rotation
 
-Give nthe problem description:
+Given the problem description:
 
 Rotate an array to the right by a given number of steps.
 
@@ -60,13 +60,13 @@ I will start with the boundaries test, from the problem description:
 
 I will start a new test case and test K (number or rotations) first. K should be between 0 and 100. Next test is N (number of elements in the array) and because an array cannot have a negative number of elements, I can skip this test. So I will test an array with more than 100 elements.
 
-The following test is to check if each element of the array is within the range -1k..1k. In order to do that, I will follow a standard practice in Unit Test: the Arrange, Act and Assert (AAA) Pattern. This means tha the unit test contain 3 parts:
+The following test is to check if each element of the array is within the range -1k..1k. In order to do that, I will follow a standard practice in Unit Test: the Arrange, Act and Assert (AAA) Pattern. This means that the unit test contain 3 parts:
 
 - Arrange: setup and prepare things needed by the test. Create objects, assign values or set expectations.
 
 - Act: invoke the method being tested.
 
-- Assert: verify the results and check if the expections were met.
+- Assert: verify the results and check if the expectations were met.
 
 ```js
 // cyclic-rotation.js
@@ -236,7 +236,7 @@ The problem description says:
     Rotate an array to the right by a given number of steps.
     Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place.
 
-So if I rotate the array by 1 step, the last element is removed and added to the begining of the array.
+So if I rotate the array by 1 step, the last element is removed and added to the beginning of the array.
 To do that in JavaScript I looked at the Array methods and saw that I can use pop() and unshift():
 
 - The pop() method of Array instances removes the last element from an array and returns that element. This method changes the length of the array.
@@ -518,4 +518,4 @@ Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
 Snapshots:   0 total
 Time:        0.713 s, estimated 1 s
-
+```
