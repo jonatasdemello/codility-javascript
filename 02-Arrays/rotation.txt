@@ -11,6 +11,7 @@ Explanation
 Rotation 1 => [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7]
 Rotation 2 => [6, 3, 8, 9, 7] -> [7, 6, 3, 8, 9]
 Rotation 3 => [7, 6, 3, 8, 9] -> [9, 7, 6, 3, 8]
+               ^___________|
 
 K (rotation)
 
@@ -64,13 +65,44 @@ fun solution(A: IntArray, K: Int): IntArray {
     val r = K % A.size
     val L = A.size - r
     val R = L - 1
-    
+
     return (A.slice(L until A.size) + A.slice(0..R)).toIntArray()
 
 }
 
 Time complexity: O(N) Where n is the number of elements in the input array nums. This is because we are iterating through the array twice, once to copy the elements to a new array and once to update the original array with the rotated elements.
 Space complexity: O(N) We are creating a copy of the input array nums with the same size, which requires additional space.
+
+
+N = A.length = 5
+
+k 0 mod 5 = 0
+k 1 mod 5 = 1
+k 2 mod 5 = 2
+k 3 mod 5 = 3
+k 4 mod 5 = 4
+k 5 mod 5 = 0
+k 6 mod 5 = 1
+k 7 mod 5 = 2
+k 8 mod 5 = 3
+k 9 mod 5 = 4
+
+
+or
+
+N = A.length = 5
+K = 3
+k 0 mod 5 = 0
+k 1 mod 5 = 1
+k 2 mod 5 = 2
+k 3 mod 5 = 3
+k 4 mod 5 = 4
+k 5 mod 5 = 0
+k 6 mod 5 = 1
+k 7 mod 5 = 2
+k 8 mod 5 = 3
+k 9 mod 5 = 4
+
 
 idx  A: [ 0, 1, 2, 3, 4 ]
 ----------------------------------------

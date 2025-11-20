@@ -54,10 +54,8 @@ describe('CyclicRotation Tests', () => {
     const A = [1, 2, 3, 4, 5];
     const K = 2;
     const expected = [4, 5, 1, 2, 3];
-
     // act
     const result = solution(A, K);
-
     // assert
     expect(result).toEqual(expected);
   });

@@ -30,16 +30,38 @@ module.exports = function solution(A, K) { // A array, K integer
 	// one way to rotate the array is to pop the last element and unshift it to the front K times
 	// The pop() method of Array instances removes the last element from an array and returns that element. This method changes the length of the array.
 	// The unshift() method of Array instances adds the specified elements to the beginning of an array and returns the new length of the array.
-	for (let i = 0; i < K; i++) {
-		let item = A.pop();
-		A.unshift(item);
-	}
-
-	// // rotate the array
-	// for (let i = 0; i < N; i++) {
-	// 	let newIndex = (i + K) % N;
-	// 	result[newIndex] = A[i];
+	// for (let i = 0; i < K; i++) {
+	// 	let item = A.pop();
+	// 	A.unshift(item);
 	// }
 
-	return A;
+	// 1# improvement
+	// if K > N, we can reduce the number of rotations
+	if (K > N) {
+    	K = K % N;
+    }
+
+	// for (let i = 0; i < K; i++) {
+	// 	let item = A.pop();
+	// 	A.unshift(item);
+	// }
+	// return A;
+
+	// 2# improvement
+	// calculate where to split
+	let R = N - K; // from end the until the split point
+
+	// split the array:
+	// let arrLeft = A.slice(0, R); // [0..K]
+	// let arrRight = A.slice(R, A.length); // [idxLeft..A.length]
+	// let O = arrRight.concat(arrLeft);
+	// return O;
+
+
+	// rotate the array
+	for (let i = 0; i < N; i++) {
+		let newIndex = (i + K) % N;
+		result[newIndex] = A[i];
+	}
+	return result;
 }
