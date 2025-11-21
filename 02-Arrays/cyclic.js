@@ -3,7 +3,7 @@
 // Cyclic Rotation: Rotate an array to the right by a given number of steps.
 // given an array A consisting of N integers and an integer K,
 // returns the array A rotated K times.
-function solution(A, K) {
+function cyclic(A, K) {
     var result = [];
 
     // debug
@@ -21,16 +21,16 @@ function solution(A, K) {
 
 
 // K = 3, A = [3, 8, 9, 7, 6], O = [9, 7, 6, 3, 8]
-//solution([3, 8, 9, 7, 6], 3); // should return [9, 7, 6, 3, 8]
-// solution([3, 8, 9, 7, 6], 1); // should return [9, 7, 6, 3, 8]
-// solution([3, 8, 9, 7, 6], 6); // should return [9, 7, 6, 3, 8]
+//cyclic([3, 8, 9, 7, 6], 3); // should return [9, 7, 6, 3, 8]
+// cyclic([3, 8, 9, 7, 6], 1); // should return [9, 7, 6, 3, 8]
+// cyclic([3, 8, 9, 7, 6], 6); // should return [9, 7, 6, 3, 8]
 
-// solution([1, 2, 3, 4, 5], 1);
-// solution([1, 2, 3, 4, 5], 2);
-solution([1, 2, 3, 4, 5], 3);
-// solution([1, 2, 3, 4, 5], 4);
-// solution([1, 2, 3, 4, 5], 5);
-solution([1, 2, 3, 4, 5], 6);
+// cyclic([1, 2, 3, 4, 5], 1);
+// cyclic([1, 2, 3, 4, 5], 2);
+cyclic([1, 2, 3, 4, 5], 3);
+// cyclic([1, 2, 3, 4, 5], 4);
+// cyclic([1, 2, 3, 4, 5], 5);
+cyclic([1, 2, 3, 4, 5], 6);
 
 console.log("========================================");
 
@@ -64,4 +64,4 @@ console.log("arrLeft:", arrLeft);
 console.log("arrRight:", arrRight);
 console.log("O:", O);
 
-module.exports = solution;
+module.exports = cyclic;

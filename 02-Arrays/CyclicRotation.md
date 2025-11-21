@@ -39,7 +39,7 @@ Given
 
     A = [1, 2, 3, 4]
     K = 4
-    the function should return [1, 2, 3, 4]s
+    the function should return [1, 2, 3, 4]
 
 Assume that:
 
@@ -273,7 +273,7 @@ Time:        0.746 s, estimated 1 s
 
 Nice! all my tests are passing now.
 
-**Note:** this is a solution that match the criteria in the problem description but it is not an optmized solution yet and this is fine. First I solve the problem, then I iterate over it trying to find ways to optimize it (use less memory, space or computing time). Sometimes this is not necessary - for example when the code is not used very often or something needs to be deployed fast to fix a bug. And sometimes there are spots where memory and processing time are really important.
+**Note:** this is a solution that match the criteria in the problem description but it is not an optimized solution yet and this is fine. First I solve the problem, then I iterate over it trying to find ways to optimize it (use less memory, space or computing time). Sometimes this is not necessary - for example when the code is not used very often or something needs to be deployed fast to fix a bug. And sometimes there are spots where memory and processing time are really important.
 
 In order to find a better solution, lets look at what happens in each iteration and draw some conclusions.
 
@@ -362,7 +362,7 @@ If you understand this then my job is done!
 I could stop here because my requirement says: "N and K are integers within the range [0..100];" which means the biggest array I may have will contain 100 items.
 If the requirements were different and I could have thousands or millions or items, improving this would be a must.
 
-Another thing to consider is memory usage. In some languages array sizes are fixed (imutables) which means that an operation to resize (remove or add elements) will return a new array in memory and the old one must be released of freed by the garbage collector.
+Another thing to consider is memory usage. In some languages array sizes are fixed (immutable) which means that an operation to resize (remove or add elements) will return a new array in memory and the old one must be released of freed by the garbage collector.
 For example if I have an array with 100 integers and each integer use 8 bytes of memory, my array takes 800 bytes of memory.
 This is not much, but if I do that operation 100x twice (one for pop and another for unshift) that is 800 x 200 = 160,000 bytes or 160k (ish).
 Now if my array has 10,000 integers: x8 bytes each = 80,000 bytes x200 = 16,000,000 or 16 Mbytes of space (even if temporary).
@@ -371,7 +371,7 @@ Or when working with limited resources such as IoT devices where every byte coun
 
 ### Further Exploration
 
-What if instead of modifying the array every step we could calculte the final state and then split the array in a way that matches the expected result?
+What if instead of modifying the array every step we could calculate the final state and then split the array in a way that matches the expected result?
 
 Let's take a look in this particular case:
 
@@ -399,7 +399,7 @@ flip
    [3, 4, 5] + [1, 2]
 ```
 
-if K=3 then split the arry at position (K-1) = 2 (rember array index start at 0)
+if K=3 then split the array at position (K-1) = 2 (remember that array index start at 0)
 
 Split point R is A[2] : [1, 2] + [3, 4, 5]
 

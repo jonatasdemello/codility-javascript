@@ -61,9 +61,12 @@ describe('CyclicRotation Tests', () => {
   });
 
   test.each([
+    [[3, 8, 9, 7, 6], 3, [9, 7, 6, 3, 8]],
+    [[0, 0, 0], 1, [0, 0, 0]],
+    [[1, 2, 3, 4], 4, [1, 2, 3, 4]],
     [[1, 2, 3, 4, 5], 2, [4, 5, 1, 2, 3]],
     [[1, 2, 3, 4, 5], 1, [5, 1, 2, 3, 4]],
-    [[1, 2, 3, 4, 5], 3, [3, 4, 5, 1, 2]],
+    [[1, 2, 3, 4, 5], 3, [3, 4, 5, 1, 2]]
   ])('array: %s and K: %i => %s', (A, K, expected) => {
     // each parameter goes into the test function: A, K, expected
     expect(solution(A, K)).toEqual(expected);
