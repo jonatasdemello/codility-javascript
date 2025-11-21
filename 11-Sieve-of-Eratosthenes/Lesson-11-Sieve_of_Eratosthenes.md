@@ -22,11 +22,11 @@ For example, consider integer N = 5 and array A such that:
 
 For the following elements:
 
-        A[0] = 3, the non-divisors are: 2, 6,
-        A[1] = 1, the non-divisors are: 3, 2, 3, 6,
-        A[2] = 2, the non-divisors are: 3, 3, 6,
-        A[3] = 3, the non-divisors are: 2, 6,
-        A[4] = 6, there aren't any non-divisors.
+    A[0] = 3, the non-divisors are: 2, 6,
+    A[1] = 1, the non-divisors are: 3, 2, 3, 6,
+    A[2] = 2, the non-divisors are: 3, 3, 6,
+    A[3] = 3, the non-divisors are: 2, 6,
+    A[4] = 6, there aren't any non-divisors.
 
 Write a function:
 
@@ -47,8 +47,8 @@ the function should return [2, 4, 3, 2, 0], as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..50,000];
-        each element of array A is an integer within the range [1..2 * N].
+    N is an integer within the range [1..50,000];
+    each element of array A is an integer within the range [1..2 * N].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -71,9 +71,9 @@ For example, consider an integer N = 26 and arrays P, Q such that:
 
 The number of semiprimes within each of these ranges is as follows:
 
-        (1, 26) is 10,
-        (4, 10) is 4,
-        (16, 20) is 0.
+    (1, 26) is 10,
+    (4, 10) is 4,
+    (16, 20) is 0.
 
 Write a function:
 
@@ -90,10 +90,10 @@ the function should return the values [10, 4, 0], as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..50,000];
-        M is an integer within the range [1..30,000];
-        each element of arrays P and Q is an integer within the range [1..N];
-        P[i] ≤ Q[i].
+    N is an integer within the range [1..50,000];
+    M is an integer within the range [1..30,000];
+    each element of arrays P and Q is an integer within the range [1..N];
+    P[i] ≤ Q[i].
 
 
 ---------------------------------------------------------------------------------------------------

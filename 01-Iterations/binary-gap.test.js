@@ -7,22 +7,22 @@ describe('BinaryGap Tests', () => {
   // valid input: negative number
   test('Given -1 should throw an error.', () => {
     expect(() => {
-          solution(-1);
-        }).toThrow();
+      solution(-1);
+    }).toThrow();
   });
 
   // valid input: zero
   test('Given 0 should throw an error.', () => {
     expect(() => {
-          solution(0);
-        }).toThrow();
+      solution(0);
+    }).toThrow();
   });
 
   // valid input: big number
   test('Given 2,147,483,648 should throw an error.', () => {
     expect(() => {
-          solution(2147483648);
-        }).toThrow();
+      solution(2147483648);
+    }).toThrow();
   });
 
   // valid input boundary: 1

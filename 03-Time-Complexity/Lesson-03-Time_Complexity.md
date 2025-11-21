@@ -25,14 +25,14 @@ For example, given:
 
 the function should return 3, because the frog will be positioned as follows:
 
-        after the first jump, at position 10 + 30 = 40
-        after the second jump, at position 10 + 30 + 30 = 70
-        after the third jump, at position 10 + 30 + 30 + 30 = 100
+    after the first jump, at position 10 + 30 = 40
+    after the second jump, at position 10 + 30 + 30 = 70
+    after the third jump, at position 10 + 30 + 30 + 30 = 100
 
 Write an efficient algorithm for the following assumptions:
 
-        X, Y and D are integers within the range [1..1,000,000,000];
-        X ≤ Y.
+    X, Y and D are integers within the range [1..1,000,000,000];
+    X ≤ Y.
 
 ---------------------------------------------------------------------------------------------------
 easy
@@ -59,9 +59,9 @@ the function should return 4, as it is the missing element.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..100,000];
-        the elements of A are all distinct;
-        each element of array A is an integer within the range [1..(N + 1)].
+    N is an integer within the range [0..100,000];
+    the elements of A are all distinct;
+    each element of array A is an integer within the range [1..(N + 1)].
 
 ---------------------------------------------------------------------------------------------------
 easy
@@ -87,10 +87,10 @@ For example, consider array A such that:
 
 We can split this tape in four places:
 
-        P = 1, difference = |3 − 10| = 7
-        P = 2, difference = |4 − 9| = 5
-        P = 3, difference = |6 − 7| = 1
-        P = 4, difference = |10 − 3| = 7
+    P = 1, difference = |3 − 10| = 7
+    P = 2, difference = |4 − 9| = 5
+    P = 3, difference = |6 − 7| = 1
+    P = 4, difference = |10 − 3| = 7
 
 Write a function:
 
@@ -109,8 +109,8 @@ the function should return 1, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [2..100,000];
-        each element of array A is an integer within the range [−1,000..1,000].
+    N is an integer within the range [2..100,000];
+    each element of array A is an integer within the range [−1,000..1,000].
 
 
 ---------------------------------------------------------------------------------------------------

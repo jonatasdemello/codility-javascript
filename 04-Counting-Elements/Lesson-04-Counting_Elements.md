@@ -5,7 +5,8 @@ https://app.codility.com/programmers/lessons/4-counting_elements/
 
 ---------------------------------------------------------------------------------------------------
 easy
-	FrogRiverOne	Find the earliest time when a frog can jump to the other side of a river.
+
+# FrogRiverOne	Find the earliest time when a frog can jump to the other side of a river.
 
 
 
@@ -49,8 +50,8 @@ the function should return 6, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N and X are integers within the range [1..100,000];
-        each element of array A is an integer within the range [1..X].
+    N and X are integers within the range [1..100,000];
+    each element of array A is an integer within the range [1..X].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -101,8 +102,8 @@ the function should return 0.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [1..1,000,000,000].
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [1..1,000,000,000].
 
 
 
@@ -114,13 +115,13 @@ medium
 
 You are given N counters, initially set to 0, and you have two possible operations on them:
 
-        increase(X) − counter X is increased by 1,
-        max counter − all counters are set to the maximum value of any counter.
+    increase(X) − counter X is increased by 1,
+    max counter − all counters are set to the maximum value of any counter.
 
 A non-empty array A of M integers is given. This array represents consecutive operations:
 
-        if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
-        if A[K] = N + 1 then operation K is max counter.
+    if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
+    if A[K] = N + 1 then operation K is max counter.
 
 For example, given integer N = 5 and array A such that:
     A[0] = 3
@@ -163,8 +164,8 @@ the function should return [3, 2, 2, 4, 2], as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N and M are integers within the range [1..100,000];
-        each element of array A is an integer within the range [1..N + 1].
+    N and M are integers within the range [1..100,000];
+    each element of array A is an integer within the range [1..N + 1].
 
 
 
@@ -190,8 +191,8 @@ Given A = [−1, −3], the function should return 1.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [−1,000,000..1,000,000].
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [−1,000,000..1,000,000].
 
 
 

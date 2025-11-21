@@ -39,9 +39,9 @@ the function should return 5, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [−2,147,483,648..2,147,483,647];
-        array A is sorted in non-decreasing order.
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [−2,147,483,648..2,147,483,647];
+    array A is sorted in non-decreasing order.
 
 
 ---------------------------------------------------------------------------------------------------
@@ -83,9 +83,9 @@ the function should return 9, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        M is an integer within the range [0..100,000];
-        each element of array A is an integer within the range [0..M].
+    N is an integer within the range [1..100,000];
+    M is an integer within the range [0..100,000];
+    each element of array A is an integer within the range [0..M].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -95,9 +95,9 @@ easy
 
 An array A consisting of N integers is given. A triplet (P, Q, R) is triangular if it is possible to build a triangle with sides of lengths A[P], A[Q] and A[R]. In other words, triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
 
-        A[P] + A[Q] > A[R],
-        A[Q] + A[R] > A[P],
-        A[R] + A[P] > A[Q].
+    A[P] + A[Q] > A[R],
+    A[Q] + A[R] > A[P],
+    A[R] + A[P] > A[Q].
 
 For example, consider array A such that:
   A[0] = 10    A[1] = 2    A[2] = 5
@@ -119,8 +119,8 @@ the function should return 4, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..1,000];
-        each element of array A is an integer within the range [1..1,000,000,000].
+    N is an integer within the range [0..1,000];
+    each element of array A is an integer within the range [1..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -170,8 +170,8 @@ the function should return |(−8) + 5| = 3.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------

@@ -35,10 +35,10 @@ For example, given arrays A, B shown above, the function should return 3, as exp
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..30,000];
-        each element of arrays A and B is an integer within the range [0..1,000,000,000];
-        A[I] ≤ B[I], for each I (0 ≤ I < N);
-        B[K] ≤ B[K + 1], for each K (0 ≤ K < N − 1).
+    N is an integer within the range [0..30,000];
+    each element of arrays A and B is an integer within the range [0..1,000,000,000];
+    A[I] ≤ B[I], for each I (0 ≤ I < N);
+    B[K] ≤ B[K + 1], for each K (0 ≤ K < N − 1).
 
 
 ---------------------------------------------------------------------------------------------------
@@ -66,8 +66,8 @@ The ropes are shown in the figure below.
 
 We can tie:
 
-        rope 1 with rope 2 to produce a rope of length A[1] + A[2] = 5;
-        rope 4 with rope 5 with rope 6 to produce a rope of length A[4] + A[5] + A[6] = 5.
+    rope 1 with rope 2 to produce a rope of length A[1] + A[2] = 5;
+    rope 4 with rope 5 with rope 6 to produce a rope of length A[4] + A[5] + A[6] = 5.
 
 After that, there will be three ropes whose lengths are greater than or equal to K = 4. It is not possible to produce four such ropes.
 
@@ -90,9 +90,9 @@ the function should return 3, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        K is an integer within the range [1..1,000,000,000];
-        each element of array A is an integer within the range [1..1,000,000,000].
+    N is an integer within the range [1..100,000];
+    K is an integer within the range [1..1,000,000,000];
+    each element of array A is an integer within the range [1..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------

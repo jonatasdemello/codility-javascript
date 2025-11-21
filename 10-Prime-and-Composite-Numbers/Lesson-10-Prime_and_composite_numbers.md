@@ -22,7 +22,7 @@ For example, given N = 24, the function should return 8, because 24 has 8 factor
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..2,147,483,647].
+    N is an integer within the range [1..2,147,483,647].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -39,10 +39,10 @@ The goal is to find the minimal perimeter of any rectangle whose area equals N. 
 
 For example, given integer N = 30, rectangles of area 30 are:
 
-        (1, 30), with a perimeter of 62,
-        (2, 15), with a perimeter of 34,
-        (3, 10), with a perimeter of 26,
-        (5, 6), with a perimeter of 22.
+    (1, 30), with a perimeter of 62,
+    (2, 15), with a perimeter of 34,
+    (3, 10), with a perimeter of 26,
+    (5, 6), with a perimeter of 22.
 
 Write a function:
 
@@ -54,7 +54,7 @@ For example, given an integer N = 30, the function should return 22, as explaine
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..1,000,000,000].
+    N is an integer within the range [1..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -88,9 +88,9 @@ Flags can only be set on peaks. What's more, if you take K flags, then the dista
 
 For example, given the mountain range represented by array A, above, with N = 12, if you take:
 
-        two flags, you can set them on peaks 1 and 5;
-        three flags, you can set them on peaks 1, 5 and 10;
-        four flags, you can set only three flags, on peaks 1, 5 and 10.
+    two flags, you can set them on peaks 1 and 5;
+    three flags, you can set them on peaks 1, 5 and 10;
+    four flags, you can set only three flags, on peaks 1, 5 and 10.
 
 You can therefore set a maximum of three flags in this case.
 
@@ -118,8 +118,8 @@ the function should return 3, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..400,000];
-        each element of array A is an integer within the range [0..1,000,000,000].
+    N is an integer within the range [1..400,000];
+    each element of array A is an integer within the range [0..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -150,10 +150,10 @@ has exactly three peaks: 3, 5, 10.
 
 We want to divide this array into blocks containing the same number of elements. More precisely, we want to choose a number K that will yield the following blocks:
 
-        A[0], A[1], ..., A[K − 1],
-        A[K], A[K + 1], ..., A[2K − 1],
-        ...
-        A[N − K], A[N − K + 1], ..., A[N − 1].
+    A[0], A[1], ..., A[K − 1],
+    A[K], A[K + 1], ..., A[2K − 1],
+    ...
+    A[N − K], A[N − K + 1], ..., A[N − 1].
 
 What's more, every block should contain at least one peak. Notice that extreme elements of the blocks (for example A[K − 1] or A[K]) can also be peaks, but only if they have both neighbors (including one in an adjacent blocks).
 
@@ -161,9 +161,9 @@ The goal is to find the maximum number of blocks into which the array A can be d
 
 Array A can be divided into blocks as follows:
 
-        one block (1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2). This block contains three peaks.
-        two blocks (1, 2, 3, 4, 3, 4) and (1, 2, 3, 4, 6, 2). Every block has a peak.
-        three blocks (1, 2, 3, 4), (3, 4, 1, 2), (3, 4, 6, 2). Every block has a peak. Notice in particular that the first block (1, 2, 3, 4) has a peak at A[3], because A[2] < A[3] > A[4], even though A[4] is in the adjacent block.
+    one block (1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2). This block contains three peaks.
+    two blocks (1, 2, 3, 4, 3, 4) and (1, 2, 3, 4, 6, 2). Every block has a peak.
+    three blocks (1, 2, 3, 4), (3, 4, 1, 2), (3, 4, 6, 2). Every block has a peak. Notice in particular that the first block (1, 2, 3, 4) has a peak at A[3], because A[2] < A[3] > A[4], even though A[4] is in the adjacent block.
 
 However, array A cannot be divided into four blocks, (1, 2, 3), (4, 3, 4), (1, 2, 3) and (4, 6, 2), because the (1, 2, 3) blocks do not contain a peak. Notice in particular that the (4, 3, 4) block contains two peaks: A[3] and A[5].
 
@@ -195,8 +195,8 @@ the function should return 3, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [0..1,000,000,000].
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [0..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------

@@ -33,8 +33,8 @@ the function may return 0, 2, 4, 6 or 7, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..100,000];
-        each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
+    N is an integer within the range [0..100,000];
+    each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 
 
 
@@ -60,8 +60,8 @@ For example, given array A such that:
 
 we can find two equi leaders:
 
-        0, because sequences: (4) and (3, 4, 4, 4, 2) have the same leader, whose value is 4.
-        2, because sequences: (4, 3, 4) and (4, 4, 2) have the same leader, whose value is 4.
+    0, because sequences: (4) and (3, 4, 4, 4, 2) have the same leader, whose value is 4.
+    2, because sequences: (4, 3, 4) and (4, 4, 2) have the same leader, whose value is 4.
 
 The goal is to count the number of equi leaders.
 
@@ -83,8 +83,8 @@ the function should return 2, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
 
 
 ---------------------------------------------------------------------------------------------------

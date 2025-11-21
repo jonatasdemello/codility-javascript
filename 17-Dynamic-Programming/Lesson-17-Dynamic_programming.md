@@ -26,10 +26,10 @@ For example, given the following array:
 
 one possible game could be as follows:
 
-        the pebble is on square number 0, which is marked;
-        we throw 3; the pebble moves from square number 0 to square number 3; we mark square number 3;
-        we throw 5; the pebble does not move, since there is no square number 8 on the board;
-        we throw 2; the pebble moves to square number 5; we mark this square and the game ends.
+    the pebble is on square number 0, which is marked;
+    we throw 3; the pebble moves from square number 0 to square number 3; we mark square number 3;
+    we throw 5; the pebble does not move, since there is no square number 8 on the board;
+    we throw 2; the pebble moves to square number 5; we mark this square and the game ends.
 
 The marked squares are 0, 3 and 5, so the result of the game is 1 + 9 + (−2) = 8. This is the maximal possible result that can be achieved on this board.
 
@@ -51,8 +51,8 @@ the function should return 8, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [2..100,000];
-        each element of array A is an integer within the range [−10,000..10,000].
+    N is an integer within the range [2..100,000];
+    each element of array A is an integer within the range [−10,000..10,000].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ your function should return 0, since for S = [−1, 1, −1, 1], val(A, S) = 0, 
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..20,000];
-        each element of array A is an integer within the range [−100..100].
+    N is an integer within the range [0..20,000];
+    each element of array A is an integer within the range [−100..100].
 
 

@@ -28,10 +28,10 @@ For example, you are given integers K = 3, M = 5 and array A such that:
 
 The array can be divided, for example, into the following blocks:
 
-        [2, 1, 5, 1, 2, 2, 2], [], [] with a large sum of 15;
-        [2], [1, 5, 1, 2], [2, 2] with a large sum of 9;
-        [2, 1, 5], [], [1, 2, 2, 2] with a large sum of 8;
-        [2, 1], [5, 1], [2, 2, 2] with a large sum of 6.
+    [2, 1, 5, 1, 2, 2, 2], [], [] with a large sum of 15;
+    [2], [1, 5, 1, 2], [2, 2] with a large sum of 9;
+    [2, 1, 5], [], [1, 2, 2, 2] with a large sum of 8;
+    [2, 1], [5, 1], [2, 2, 2] with a large sum of 6.
 
 The goal is to minimize the large sum. In the above example, 6 is the minimal large sum.
 
@@ -54,9 +54,9 @@ the function should return 6, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N and K are integers within the range [1..100,000];
-        M is an integer within the range [0..10,000];
-        each element of array A is an integer within the range [0..M].
+    N and K are integers within the range [1..100,000];
+    M is an integer within the range [0..10,000];
+    each element of array A is an integer within the range [0..M].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -90,10 +90,10 @@ Given array C such that:
 
 if we use the following nails:
 
-        0, then planks [1, 4] and [4, 5] will both be nailed.
-        0, 1, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
-        0, 1, 2, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
-        0, 1, 2, 3, then all the planks will be nailed.
+    0, then planks [1, 4] and [4, 5] will both be nailed.
+    0, 1, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
+    0, 1, 2, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
+    0, 1, 2, 3, then all the planks will be nailed.
 
 Thus, four is the minimum number of nails that, used sequentially, allow all the planks to be nailed.
 
@@ -121,9 +121,9 @@ the function should return 4, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N and M are integers within the range [1..30,000];
-        each element of arrays A, B and C is an integer within the range [1..2*M];
-        A[K] ≤ B[K].
+    N and M are integers within the range [1..30,000];
+    each element of arrays A, B and C is an integer within the range [1..2*M];
+    A[K] ≤ B[K].
 
 
 

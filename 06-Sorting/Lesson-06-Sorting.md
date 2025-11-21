@@ -23,8 +23,8 @@ the function should return 3, because there are 3 distinct values appearing in a
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..100,000];
-        each element of array A is an integer within the range [−1,000,000..1,000,000].
+    N is an integer within the range [0..100,000];
+    each element of array A is an integer within the range [−1,000,000..1,000,000].
 
 
 
@@ -46,9 +46,9 @@ For example, array A such that:
 
 contains the following example triplets:
 
-        (0, 1, 2), product is −3 * 1 * 2 = −6
-        (1, 2, 4), product is 1 * 2 * 5 = 10
-        (2, 4, 5), product is 2 * 5 * 6 = 60
+    (0, 1, 2), product is −3 * 1 * 2 = −6
+    (1, 2, 4), product is 1 * 2 * 5 = 10
+    (2, 4, 5), product is 2 * 5 * 6 = 60
 
 Your goal is to find the maximal product of any triplet.
 
@@ -70,8 +70,8 @@ the function should return 60, as the product of triplet (2, 4, 5) is maximal.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [3..100,000];
-        each element of array A is an integer within the range [−1,000..1,000].
+    N is an integer within the range [3..100,000];
+    each element of array A is an integer within the range [−1,000..1,000].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -82,9 +82,9 @@ easy
 
 An array A consisting of N integers is given. A triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
 
-        A[P] + A[Q] > A[R],
-        A[Q] + A[R] > A[P],
-        A[R] + A[P] > A[Q].
+    A[P] + A[Q] > A[R],
+    A[Q] + A[R] > A[P],
+    A[R] + A[P] > A[Q].
 
 For example, consider array A such that:
   A[0] = 10    A[1] = 2    A[2] = 5
@@ -110,8 +110,8 @@ the function should return 0.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..100,000];
-        each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
+    N is an integer within the range [0..100,000];
+    each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -134,8 +134,8 @@ The figure below shows discs drawn for N = 6 and A as follows:
 
 There are eleven (unordered) pairs of discs that intersect, namely:
 
-        discs 1 and 4 intersect, and both intersect with all the other discs;
-        disc 2 also intersects with discs 0 and 3.
+    discs 1 and 4 intersect, and both intersect with all the other discs;
+    disc 2 also intersects with discs 0 and 3.
 
 Write a function:
 
@@ -147,8 +147,8 @@ Given array A shown above, the function should return 11, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..100,000];
-        each element of array A is an integer within the range [0..2,147,483,647].
+    N is an integer within the range [0..100,000];
+    each element of array A is an integer within the range [0..2,147,483,647].
 
 
 

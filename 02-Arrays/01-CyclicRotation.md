@@ -1,6 +1,16 @@
+### Lesson-02 - Arrays
+
+---------------------------------------------------------------------------------------------------
+
+https://app.codility.com/programmers/lessons/2-arrays/
+
+---------------------------------------------------------------------------------------------------
+
+[easy]
+
 # Cyclic Rotation
 
-Given the problem description:
+    Given the problem description:
 
 Rotate an array to the right by a given number of steps.
 
@@ -43,8 +53,8 @@ Given
 
 Assume that:
 
-        N and K are integers within the range [0..100];
-        each element of array A is an integer within the range [−1,000..1,000].
+    N and K are integers within the range [0..100];
+    each element of array A is an integer within the range [−1,000..1,000].
 
 In your solution, focus on correctness.
 The performance of your solution will not be the focus of the assessment.
@@ -183,7 +193,7 @@ and run the tests
 Test Suites: 1 failed, 1 total
 Tests:       6 failed, 6 total
 Snapshots:   0 total
-Time:        0.938 s, estimated 1 s
+Time:    0.938 s, estimated 1 s
 ```
 
 So the next step is to implement the validations.
@@ -191,20 +201,20 @@ So the next step is to implement the validations.
 ```js
     // k: integer representing number of rotations;
     if (K < 1 || K > 100) {
-        throw new Error("Parameter K is invalid!");
+    throw new Error("Parameter K is invalid!");
     }
 
     // N: number of elements in A[];
     let N = A.length;
     if (N < 0 || N > 100) {
-        throw new Error("Parameter N is invalid!");
+    throw new Error("Parameter N is invalid!");
     }
 
     // each element of array A is an integer within the range [-1,000..1,000].
     for (let i = 0; i < N; i++) {
-        if (A[i] < -1000 || A[i] > 1000) {
-            throw new Error("Element A[" + i + "] is invalid!");
-        }
+    if (A[i] < -1000 || A[i] > 1000) {
+        throw new Error("Element A[" + i + "] is invalid!");
+    }
     }
 ```
 
@@ -223,7 +233,7 @@ and run the tests again
 Test Suites: 1 failed, 1 total
 Tests:       4 failed, 2 passed, 6 total
 Snapshots:   0 total
-Time:        0.901 s, estimated 1 s
+Time:    0.901 s, estimated 1 s
 ```
 
 the failing tests now are for the actual solution array - which I have not implemented anything yet.
@@ -248,8 +258,8 @@ OK, so if I want to do it K times, here is the code I added to my `cyclic-rotati
 // cyclic-rotation.js
 
     for (let i = 0; i < K; i++) {
-        let item = A.pop();
-        A.unshift(item);
+    let item = A.pop();
+    A.unshift(item);
     }
 ```
 
@@ -268,7 +278,7 @@ and run the tests again:
 Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
 Snapshots:   0 total
-Time:        0.746 s, estimated 1 s
+Time:    0.746 s, estimated 1 s
 ```
 
 Nice! all my tests are passing now.
@@ -316,7 +326,7 @@ O = [9, 7, 6, 3, 8]
      |________^
 ```
 
-This will be true only when K <= A.length. But what happens if K > A.length? 
+This will be true only when K <= A.length. But what happens if K > A.length?
 
 Looks like it goes back to 0 index and start again...
 
@@ -347,11 +357,11 @@ The first improvement I can do is:
     let N = A.length;
     // if K > N, we can reduce the number of rotations
     if (K > N) {
-        K = K % N;
+    K = K % N;
     }
     for (let i = 0; i < K; i++) {
-        let item = A.pop();
-        A.unshift(item);
+    let item = A.pop();
+    A.unshift(item);
     }
 ```
 
@@ -496,8 +506,8 @@ Here is the code:
     // rotate the array
     let N = A.length;
     for (let i = 0; i < N; i++) {
-        let newIndex = (i + K) % N;
-        result[newIndex] = A[i];
+    let newIndex = (i + K) % N;
+    result[newIndex] = A[i];
     }
     return result;
 ```
@@ -517,5 +527,5 @@ run the tests again
 Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
 Snapshots:   0 total
-Time:        0.713 s, estimated 1 s
+Time:    0.713 s, estimated 1 s
 ```

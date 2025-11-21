@@ -1,6 +1,16 @@
+### Lesson-01 - Iterations
+
+---------------------------------------------------------------------------------------------------
+
+https://app.codility.com/programmers/lessons/1-iterations/
+
+---------------------------------------------------------------------------------------------------
+
+[easy]
+
 # Binary Gap
 
-Find longest sequence of zeros in binary representation of an integer.
+    Find longest sequence of zeros in binary representation of an integer.
 
 A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
@@ -27,7 +37,7 @@ For example,
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..2,147,483,647].
+    N is an integer within the range [1..2,147,483,647].
 
 ---------------------------------------------------------------------------------------------------
 
@@ -106,12 +116,12 @@ Some numbers have more than one gap and some have none.
 +--------+-----------------------+------------+--------+
 | Number | Binary Representation | Binary Gap | Result |
 +--------+-----------------------+------------+--------+
-|      9 |                  1001 | 2          |      2 |
-|    529 |            1000010001 | 4 & 3      |      4 |
-|     20 |                 10100 | 1          |      1 |
-|     15 |                  1111 | 0          |      0 |
-|     32 |                100000 | 0          |      0 |
-|   1041 |           10000010001 | 5 & 3      |      5 |
+|      9 |          1001 | 2      |      2 |
+|    529 |        1000010001 | 4 & 3      |      4 |
+|     20 |         10100 | 1      |      1 |
+|     15 |          1111 | 0      |      0 |
+|     32 |        100000 | 0      |      0 |
+|   1041 |       10000010001 | 5 & 3      |      5 |
 +--------+-----------------------+------------+--------+
 ```
 
@@ -201,22 +211,22 @@ describe('BinaryGap Tests', () => {
   // valid input: negative number
   test('Given -1 should throw an error.', () => {
     expect(() => {
-          solution(-1);
-        }).toThrow();
+      solution(-1);
+    }).toThrow();
   });
 
   // valid input: zero
   test('Given 0 should throw an error.', () => {
     expect(() => {
-          solution(0);
-        }).toThrow();
+      solution(0);
+    }).toThrow();
   });
 
   // valid input: big number
   test('Given 2,147,483,648 should throw an error.', () => {
     expect(() => {
-          solution(2147483648);
-        }).toThrow();
+      solution(2147483648);
+    }).toThrow();
   });
 
   // valid input boundary: 1
@@ -259,7 +269,7 @@ And the test result is:
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       5 failed, 2 passed, 7 total
 Snapshots:   0 total
-Time:        0.732 s, estimated 1 s
+Time:    0.732 s, estimated 1 s
 ```
 
 The `solution-template.tests.js` has 1 test suite and 2 unit tests - all passing.
@@ -339,7 +349,7 @@ Here is the test output:
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       11 failed, 2 passed, 13 total
 Snapshots:   0 total
-Time:        0.725 s, estimated 1 s
+Time:    0.725 s, estimated 1 s
 ```
 
 ## Write Some Code
@@ -466,7 +476,7 @@ Looking at the test results again, I can plan the next steps.
       28 |   // valid input boundary: 1
       29 |   test('Given 1 [0001] should return 0.', () => {
     > 30 |     expect(solution(1)).toBe(0);
-         |                         ^
+     |             ^
       31 |   });
       32 |
       33 |   // valid input boundary: 2,147,483,647
@@ -541,9 +551,9 @@ After the loop, I need to assign `maxGap = zeros;` because I return `maxGap`.
     let zeros = 0;
     // now iterate over the 0's and 1's and count
     for (var x = 0; x < bin.length; x++) {
-        if (bin[x] == 0) {
-            zeros++;
-        }
+    if (bin[x] == 0) {
+        zeros++;
+    }
     }
     maxGap = zeros;
     return maxGap;
@@ -579,17 +589,17 @@ I need to check for 1's too (closing gap).
 ```js
     // now iterate over the 0's and 1's and count
     for (var x = 0; x < bin.length; x++) {
-        if (bin[x] == 0) { // means that there is gap
-            zeros++;
+    if (bin[x] == 0) { // means that there is gap
+        zeros++;
+    }
+    if (bin[x] == 1) { // means that the gap ended
+        // if the gap ended, check if this is biggest found
+        if (zeros > maxGap) {
+        maxGap = zeros;
         }
-        if (bin[x] == 1) { // means that the gap ended
-            // if the gap ended, check if this is biggest found
-            if (zeros > maxGap) {
-                maxGap = zeros;
-            }
-            // reset the zero counter
-            zeros = 0;
-        }
+        // reset the zero counter
+        zeros = 0;
+    }
     }
     return maxGap;
 ```
@@ -619,7 +629,7 @@ Run the tests again:
 Test Suites: 2 passed, 2 total
 Tests:       13 passed, 13 total
 Snapshots:   0 total
-Time:        0.854 s, estimated 1 s
+Time:    0.854 s, estimated 1 s
 ```
 
 And we have a solution!
@@ -676,7 +686,7 @@ And ran the tests again.
 Test Suites: 2 passed, 2 total
 Tests:       35 passed, 35 total
 Snapshots:   0 total
-Time:        0.882 s, estimated 1 s
+Time:    0.882 s, estimated 1 s
 Ran all test suites related to changed files
 ```
 
@@ -710,8 +720,8 @@ Something like this:
       // second digit and on
       // check if is 0
       if n[x] == 0 then // it is a 0 gap
-        // increase out counter
-        zeros++
+    // increase out counter
+    zeros++
       end if
       // save the maxGap number
       maxGap = zeros

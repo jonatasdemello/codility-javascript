@@ -13,8 +13,8 @@ A non-empty array A consisting of N integers is given. The consecutive elements 
 
 Array A contains only 0s and/or 1s:
 
-        0 represents a car traveling east,
-        1 represents a car traveling west.
+    0 represents a car traveling east,
+    1 represents a car traveling west.
 
 The goal is to count passing cars. We say that a pair of cars (P, Q), where 0 ≤ P < Q < N, is passing when P is traveling to the east and Q is traveling to the west.
 
@@ -46,8 +46,8 @@ the function should return 5, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer that can have one of the following values: 0, 1.
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer that can have one of the following values: 0, 1.
 
 
 ---------------------------------------------------------------------------------------------------
@@ -68,9 +68,9 @@ For example, for A = 6, B = 11 and K = 2, your function should return 3, because
 
 Write an efficient algorithm for the following assumptions:
 
-        A and B are integers within the range [0..2,000,000,000];
-        K is an integer within the range [1..2,000,000,000];
-        A ≤ B.
+    A and B are integers within the range [0..2,000,000,000];
+    K is an integer within the range [1..2,000,000,000];
+    A ≤ B.
 
 
 
@@ -91,9 +91,9 @@ For example, consider string S = CAGCCTA and arrays P, Q such that:
 
 The answers to these M = 3 queries are as follows:
 
-        The part of the DNA between positions 2 and 4 contains nucleotides G and C (twice), whose impact factors are 3 and 2 respectively, so the answer is 2.
-        The part between positions 5 and 5 contains a single nucleotide T, whose impact factor is 4, so the answer is 4.
-        The part between positions 0 and 6 (the whole string) contains all nucleotides, in particular nucleotide A whose impact factor is 1, so the answer is 1.
+    The part of the DNA between positions 2 and 4 contains nucleotides G and C (twice), whose impact factors are 3 and 2 respectively, so the answer is 2.
+    The part between positions 5 and 5 contains a single nucleotide T, whose impact factor is 4, so the answer is 4.
+    The part between positions 0 and 6 (the whole string) contains all nucleotides, in particular nucleotide A whose impact factor is 1, so the answer is 1.
 
 Write a function:
 
@@ -112,11 +112,11 @@ the function should return the values [2, 4, 1], as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        M is an integer within the range [1..50,000];
-        each element of arrays P and Q is an integer within the range [0..N - 1];
-        P[K] ≤ Q[K], where 0 ≤ K < M;
-        string S consists only of upper-case English letters A, C, G, T.
+    N is an integer within the range [1..100,000];
+    M is an integer within the range [1..50,000];
+    each element of arrays P and Q is an integer within the range [0..N - 1];
+    P[K] ≤ Q[K], where 0 ≤ K < M;
+    string S consists only of upper-case English letters A, C, G, T.
 
 
 ---------------------------------------------------------------------------------------------------
@@ -138,9 +138,9 @@ For example, array A such that:
 
 contains the following example slices:
 
-        slice (1, 2), whose average is (2 + 2) / 2 = 2;
-        slice (3, 4), whose average is (5 + 1) / 2 = 3;
-        slice (1, 4), whose average is (2 + 2 + 5 + 1) / 4 = 2.5.
+    slice (1, 2), whose average is (2 + 2) / 2 = 2;
+    slice (3, 4), whose average is (5 + 1) / 2 = 3;
+    slice (1, 4), whose average is (2 + 2 + 5 + 1) / 4 = 2.5.
 
 The goal is to find the starting position of a slice whose average is minimal.
 
@@ -163,8 +163,8 @@ the function should return 1, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [2..100,000];
-        each element of array A is an integer within the range [−10,000..10,000].
+    N is an integer within the range [2..100,000];
+    each element of array A is an integer within the range [−10,000..10,000].
 
 
 

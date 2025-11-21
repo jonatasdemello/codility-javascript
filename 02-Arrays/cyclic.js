@@ -10,11 +10,11 @@ function cyclic(A, K) {
     console.log("----------------------------------------");
     console.log("K:", K, "A:", A, "A.length:", A.length, "(K % arr.length):", K % A.length, " => first element new index");
     for (let i = 0; i < K; i++) {
-        let item = A.pop();
-        A.unshift(item);
+    let item = A.pop();
+    A.unshift(item);
 
-        console.log("i:", i + 1, "A:", A);
-        //console.log("i:", i+1, "A:", A , "i % arr.length:", i % A.length);
+    console.log("i:", i + 1, "A:", A);
+    //console.log("i:", i+1, "A:", A , "i % arr.length:", i % A.length);
     }
     return A;
 }

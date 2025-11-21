@@ -33,7 +33,7 @@ For example, given integers N = 10 and M = 4. the function should return 5, as e
 
 Write an efficient algorithm for the following assumptions:
 
-        N and M are integers within the range [1..1,000,000,000].
+    N and M are integers within the range [1..1,000,000,000].
 
 
 
@@ -50,9 +50,9 @@ You are given two positive integers N and M. The goal is to check whether the se
 
 For example, given:
 
-        N = 15 and M = 75, the prime divisors are the same: {3, 5};
-        N = 10 and M = 30, the prime divisors aren't the same: {2, 5} is not equal to {2, 3, 5};
-        N = 9 and M = 5, the prime divisors aren't the same: {3} is not equal to {5}.
+    N = 15 and M = 75, the prime divisors are the same: {3, 5};
+    N = 10 and M = 30, the prime divisors aren't the same: {2, 5} is not equal to {2, 3, 5};
+    N = 9 and M = 5, the prime divisors aren't the same: {3} is not equal to {5}.
 
 Write a function:
 
@@ -69,8 +69,8 @@ the function should return 1, because only one pair (15, 75) has the same set of
 
 Write an efficient algorithm for the following assumptions:
 
-        Z is an integer within the range [1..100,000];
-        each element of arrays A and B is an integer within the range [1..2,147,483,647].
+    Z is an integer within the range [1..100,000];
+    each element of arrays A and B is an integer within the range [1..2,147,483,647].
 
 
 

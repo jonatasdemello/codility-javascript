@@ -7,7 +7,7 @@ describe('Template Tests', () => {
   // an invalid parameter should throw an error
   test('given -1 should throw an error', () => {
     expect(() => {
-        solution(-1);
+    solution(-1);
       }).toThrow();
   });
 

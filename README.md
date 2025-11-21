@@ -164,7 +164,7 @@ PS > npm test
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        0.492 s, estimated 1 s
+Time:    0.492 s, estimated 1 s
 Ran all test suites.
 ```
 
@@ -187,24 +187,67 @@ The step-by-step process and solution is here [BinaryGap.md](./01-Iterations/Bin
 
 ### Solutions
 
-- [Lesson-01 - Iterations](01-Iterations/Lesson-01-Iterations.md)
-  - [Binary Gap](./01-Iterations/BinaryGap.md)
-- [Lesson-02 - Arrays](02-Arrays/Lesson-02-Arrays.md)
-  - [Cyclic Rotation](./02-Arrays/CyclicRotation.md)
-  - [Odd Occurrences In Array](./02-Arrays/OddOccurrencesInArray.md)
-- [Lesson-03 - Time Complexity](03-Time-Complexity/Lesson-03-Time_Complexity.md)
-- [Lesson-04 - Counting Elements](04-Counting-Elements/Lesson-04-Counting_Elements.md)
-- [Lesson-05 - Prefix Sums](05-Prefix-Sums/Lesson-05-Prefix_Sums.md)
-- [Lesson-06 - Sorting](06-Sorting/Lesson-06-Sorting.md)
-- [Lesson-07 - Stacks and Queues](07-Stacks-and-Queues/Lesson-07-Stacks_and_Queues.md)
-- [Lesson-08 - Leader](08-Leader/Lesson-08-Leader.md)
-- [Lesson-09 - Maximum slice problem](09-Maximum-Slice-Problem/Lesson-09-Maximum_slice_problem.md)
-- [Lesson-10 - Prime and composite numbers](10-Prime-and-Composite-Numbers/Lesson-10-Prime_and_composite_numbers.md)
-- [Lesson-11 - Sieve of Eratosthenes](11-Sieve-of-Eratosthenes/Lesson-11-Sieve_of_Eratosthenes.md)
-- [Lesson-12 - Euclidean algorithm](12-Euclidean-Algorithm/Lesson-12-Euclidean_algorithm.md)
-- [Lesson-13 - Fibonacci numbers](13-Fibonacci-Nnumbers/Lesson-13-Fibonacci_numbers.md)
-- [Lesson-14 - Binary search algorithm](14-Binary-Search-Algorithm/Lesson-14-Binary_search_algorithm.md)
-- [Lesson-15 - Caterpillar method](15-Caterpillar-Method/Lesson-15-Caterpillar_method.md)
-- [Lesson-16 - Greedy algorithms](16-Greedy-Algorithms/Lesson-16-Greedy_algorithms.md)
-- [Lesson-17 - Dynamic programming](17-Dynamic-Programming/Lesson-17-Dynamic_programming.md)
-
+- Lesson-01 - Iterations
+  - [BinaryGap](./01-Iterations/BinaryGap.md)
+- Lesson-02 - Arrays
+  - [CyclicRotation](./02-Arrays/CyclicRotation.md)
+  - [OddOccurrencesInArray](./02-Arrays/OddOccurrencesInArray.md)
+- Lesson-03 - Time Complexity
+  - [FrogJump](./03-Time-Complexity/01-FrogJmp.md)
+  - [PermMissingElem](./03-Time-Complexity/02-PermMissingElem.md)
+  - [TapeEquilibrium](./03-Time-Complexity/03-TapeEquilibrium.md)
+- Lesson-04 - Counting Elements
+  - [FrogRiverOne](./04-Counting-Elements/01-FrogRiverOne.md)
+  - [PermCheck](./04-Counting-Elements/02-PermCheck.md)
+  - [MaxCounters](./04-Counting-Elements/03-MaxCounters.md)
+  - [MissingInteger](./04-Counting-Elements/04-MissingInteger.md)
+- Lesson-05 - Prefix Sums
+  - [PassingCars](./05-Prefix-Sums/01-PassingCars.md)
+  - [CountDiv](./05-Prefix-Sums/02-CountDiv.md)
+  - [GenomicRangeQuery](./05-Prefix-Sums/03-GenomicRangeQuery.md)
+  - [MinAvgTwoSlice](./05-Prefix-Sums/04-MinAvgTwoSlice.md)
+- Lesson-06 - Sorting
+  - [Distinct](./06-Sorting/01-Distinct.md)
+  - [MaxProductOfThree](./06-Sorting/02-MaxProductOfThree.md)
+  - [Triangle](./06-Sorting/03-Triangle.md)
+  - [NumberOfDiscIntersections](./06-Sorting/04-NumberOfDiscIntersections.md)
+- Lesson-07 - Stacks and Queues
+  - [Brackets](./07-Stacks-and-Queues/01-Brackets.md)
+  - [Fish](./07-Stacks-and-Queues/02-Fish.md)
+  - [Nesting](./07-Stacks-and-Queues/03-Nesting.md)
+  - [StoneWall](./07-Stacks-and-Queues/04-StoneWall.md)
+- Lesson-08 - Leader
+  - [Dominator](./08-Leader/01-Dominator.md)
+  - [EquiLeader](./08-Leader/02-EquiLeader.md)
+- Lesson-09 - Maximum slice problem
+  - [MaxProfit](./09-Maximum-Slice-Problem/01-MaxProfit.md)
+  - [MaxSliceSum](./09-Maximum-Slice-Problem/02-MaxSliceSum.md)
+  - [MaxDoubleSliceSum](./09-Maximum-Slice-Problem/03-MaxDoubleSliceSum.md)
+- Lesson-10 - Prime and composite numbers
+  - [CountFactors](./10-Prime-and-Composite-Numbers/01-CountFactors.md)
+  - [MinPerimeterRectangle](./10-Prime-and-Composite-Numbers/02-MinPerimeterRectangle.md)
+  - [Flags](./10-Prime-and-Composite-Numbers/03-Flags.md)
+  - [Peaks](./10-Prime-and-Composite-Numbers/04-Peaks.md)
+- Lesson-11 - Sieve of Eratosthenes
+  - [CountNonDivisible](./11-Sieve-of-Eratosthenes/02-CountNonDivisible.md)
+  - [CountSemiprimes](./11-Sieve-of-Eratosthenes/03-CountSemiprimes.md)
+- Lesson-12 - Euclidean algorithm
+  - [ChocolatesByNumbers](./12-Euclidean-Algorithm/01-ChocolatesByNumbers.md)
+  - [CommonPrimeDivisors](./12-Euclidean-Algorithm/02-CommonPrimeDivisors.md)
+- Lesson-13 - Fibonacci numbers
+  - [FibFrog](./13-Fibonacci-Nnumbers/01-FibFrog.md)
+  - [Ladder](./13-Fibonacci-Nnumbers/02-Ladder.md)
+- Lesson-14 - Binary search algorithm
+  - [MinMaxDivision](./14-Binary-Search-Algorithm/01-MinMaxDivision.md)
+  - [NailingPlanks](./14-Binary-Search-Algorithm/02-NailingPlanks.md)
+- Lesson-15 - Caterpillar method
+  - [AbsDistinct](./15-Caterpillar-Method/01-AbsDistinct.md)
+  - [CountDistinctSlices](./15-Caterpillar-Method/02-CountDistinctSlices.md)
+  - [CountTriangles](./15-Caterpillar-Method/03-CountTriangles.md)
+  - [MinAbsSumOfTwo](./15-Caterpillar-Method/04-MinAbsSumOfTwo.md)
+- Lesson-16 - Greedy algorithms
+  - [MaxNonoverlappingSegments](./16-Greedy-Algorithms/01-MaxNonoverlappingSegments.md)
+  - [TieRopes](./16-Greedy-Algorithms/02-TieRopes.md)
+- Lesson-17 - Dynamic programming
+  - [NumberSolitaire](./17-Dynamic-Programming/01-NumberSolitaire.md)
+  - [MinAbsSum](./17-Dynamic-Programming/02-MinAbsSum.md)

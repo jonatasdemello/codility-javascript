@@ -39,8 +39,8 @@ the function should return 356, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..400,000];
-        each element of array A is an integer within the range [0..200,000].
+    N is an integer within the range [0..400,000];
+    each element of array A is an integer within the range [0..200,000].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -63,16 +63,16 @@ A[3] = 4  A[4] = 0
 
 the function should return 5 because:
 
-        (3, 4) is a slice of A that has sum 4,
-        (2, 2) is a slice of A that has sum −6,
-        (0, 1) is a slice of A that has sum 5,
-        no other slice of A has sum greater than (0, 1).
+    (3, 4) is a slice of A that has sum 4,
+    (2, 2) is a slice of A that has sum −6,
+    (0, 1) is a slice of A that has sum 5,
+    no other slice of A has sum greater than (0, 1).
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..1,000,000];
-        each element of array A is an integer within the range [−1,000,000..1,000,000];
-        the result will be an integer within the range [−2,147,483,648..2,147,483,647].
+    N is an integer within the range [1..1,000,000];
+    each element of array A is an integer within the range [−1,000,000..1,000,000];
+    the result will be an integer within the range [−2,147,483,648..2,147,483,647].
 
 
 ---------------------------------------------------------------------------------------------------
@@ -99,9 +99,9 @@ For example, array A such that:
 
 contains the following example double slices:
 
-        double slice (0, 3, 6), sum is 2 + 6 + 4 + 5 = 17,
-        double slice (0, 3, 7), sum is 2 + 6 + 4 + 5 − 1 = 16,
-        double slice (3, 4, 5), sum is 0.
+    double slice (0, 3, 6), sum is 2 + 6 + 4 + 5 = 17,
+    double slice (0, 3, 7), sum is 2 + 6 + 4 + 5 − 1 = 16,
+    double slice (3, 4, 5), sum is 0.
 
 The goal is to find the maximal sum of any double slice.
 
@@ -125,8 +125,8 @@ the function should return 17, because no double slice of array A has a sum of g
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [3..100,000];
-        each element of array A is an integer within the range [−10,000..10,000].
+    N is an integer within the range [3..100,000];
+    each element of array A is an integer within the range [−10,000..10,000].
 
 
 ---------------------------------------------------------------------------------------------------

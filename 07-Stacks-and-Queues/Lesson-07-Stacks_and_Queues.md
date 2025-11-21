@@ -11,9 +11,9 @@ easy
 
 A string S consisting of N characters is considered to be properly nested if any of the following conditions is true:
 
-        S is empty;
-        S has the form "(U)" or "[U]" or "{U}" where U is a properly nested string;
-        S has the form "VW" where V and W are properly nested strings.
+    S is empty;
+    S has the form "(U)" or "[U]" or "{U}" where U is a properly nested string;
+    S has the form "VW" where V and W are properly nested strings.
 
 For example, the string "{[()()]}" is properly nested but "([)()]" is not.
 
@@ -27,8 +27,8 @@ For example, given S = "{[()()]}", the function should return 1 and given S = "(
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..200,000];
-        string S is made only of the following characters: '(', '{', '[', ']', '}' and/or ')'.
+    N is an integer within the range [0..200,000];
+    string S is made only of the following characters: '(', '{', '[', ']', '}' and/or ')'.
 
 
 
@@ -44,13 +44,13 @@ The fish are numbered from 0 to N − 1. If P and Q are two fish and P < Q, then
 
 Fish number P is represented by A[P] and B[P]. Array A contains the sizes of the fish. All its elements are unique. Array B contains the directions of the fish. It contains only 0s and/or 1s, where:
 
-        0 represents a fish flowing upstream,
-        1 represents a fish flowing downstream.
+    0 represents a fish flowing upstream,
+    1 represents a fish flowing downstream.
 
 If two fish move in opposite directions and there are no other (living) fish between them, they will eventually meet each other. Then only one fish can stay alive − the larger fish eats the smaller one. More precisely, we say that two fish P and Q meet each other when P < Q, B[P] = 1 and B[Q] = 0, and there are no living fish between them. After they meet:
 
-        If A[P] > A[Q] then P eats Q, and P will still be flowing downstream,
-        If A[Q] > A[P] then Q eats P, and Q will still be flowing upstream.
+    If A[P] > A[Q] then P eats Q, and P will still be flowing downstream,
+    If A[Q] > A[P] then Q eats P, and Q will still be flowing upstream.
 
 We assume that all the fish are flowing at the same speed. That is, fish moving in the same direction never meet. The goal is to calculate the number of fish that will stay alive.
 
@@ -73,10 +73,10 @@ For example, given the arrays shown above, the function should return 2, as expl
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array A is an integer within the range [0..1,000,000,000];
-        each element of array B is an integer that can have one of the following values: 0, 1;
-        the elements of A are all distinct.
+    N is an integer within the range [1..100,000];
+    each element of array A is an integer within the range [0..1,000,000,000];
+    each element of array B is an integer that can have one of the following values: 0, 1;
+    the elements of A are all distinct.
 
 
 
@@ -88,9 +88,9 @@ easy
 
 A string S consisting of N characters is called properly nested if:
 
-        S is empty;
-        S has the form "(U)" where U is a properly nested string;
-        S has the form "VW" where V and W are properly nested strings.
+    S is empty;
+    S has the form "(U)" where U is a properly nested string;
+    S has the form "VW" where V and W are properly nested strings.
 
 For example, string "(()(())())" is properly nested but string "())" isn't.
 
@@ -104,8 +104,8 @@ For example, given S = "(()(())())", the function should return 1 and given S = 
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [0..1,000,000];
-        string S is made only of the characters '(' and/or ')'.
+    N is an integer within the range [0..1,000,000];
+    string S is made only of the characters '(' and/or ')'.
 
 
 
@@ -134,8 +134,8 @@ the function should return 7. The figure shows one possible arrangement of seven
 
 Write an efficient algorithm for the following assumptions:
 
-        N is an integer within the range [1..100,000];
-        each element of array H is an integer within the range [1..1,000,000,000].
+    N is an integer within the range [1..100,000];
+    each element of array H is an integer within the range [1..1,000,000,000].
 
 
 
