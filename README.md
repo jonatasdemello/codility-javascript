@@ -176,22 +176,22 @@ Here I have
 
 
 
-## The Problem
+## The Problems
 
-The fist lesson/problem to solve is called **BinaryGap** copied from [Codility](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) web site.
+The problems were copied from the  [Codility](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) web site. I recommend you go there create an account and try to solve the problems there too.
 
 
-The step-by-step process and solution is here [BinaryGap.md](./01-Iterations/BinaryGap.md)
+For detailed step-by-step approach, analysis and solution to each problem, check the links bellow:
 
 -------------------
 
 ### Solutions
 
 - Lesson-01 - Iterations
-  - [BinaryGap](./01-Iterations/BinaryGap.md)
+  - [BinaryGap](./01-Iterations/01-BinaryGap.md)
 - Lesson-02 - Arrays
-  - [CyclicRotation](./02-Arrays/CyclicRotation.md)
-  - [OddOccurrencesInArray](./02-Arrays/OddOccurrencesInArray.md)
+  - [CyclicRotation](./02-Arrays/01-CyclicRotation.md)
+  - [OddOccurrencesInArray](./02-Arrays/02-OddOccurrencesInArray.md)
 - Lesson-03 - Time Complexity
   - [FrogJump](./03-Time-Complexity/01-FrogJmp.md)
   - [PermMissingElem](./03-Time-Complexity/02-PermMissingElem.md)
