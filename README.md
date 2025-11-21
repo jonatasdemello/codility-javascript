@@ -47,6 +47,7 @@ Check each lesson below for more details and other problems.
 - [Lesson-16 - Greedy algorithms](16-Greedy-Algorithms/Lesson-16-Greedy_algorithms.md)
 - [Lesson-17 - Dynamic programming](17-Dynamic-Programming/Lesson-17-Dynamic_programming.md)
 
+
 ## Setup
 
 ### Tools
@@ -183,3 +184,27 @@ The fist lesson/problem to solve is called **BinaryGap** copied from [Codility](
 The step-by-step process and solution is here [BinaryGap.md](./01-Iterations/BinaryGap.md)
 
 -------------------
+
+### Solutions
+
+- [Lesson-01 - Iterations](01-Iterations/Lesson-01-Iterations.md)
+  - [Binary Gap](./01-Iterations/BinaryGap.md)
+- [Lesson-02 - Arrays](02-Arrays/Lesson-02-Arrays.md)
+  - [Cyclic Rotation](./02-Arrays/CyclicRotation.md)
+  - [Odd Occurrences In Array](./02-Arrays/OddOccurrencesInArray.md)
+- [Lesson-03 - Time Complexity](03-Time-Complexity/Lesson-03-Time_Complexity.md)
+- [Lesson-04 - Counting Elements](04-Counting-Elements/Lesson-04-Counting_Elements.md)
+- [Lesson-05 - Prefix Sums](05-Prefix-Sums/Lesson-05-Prefix_Sums.md)
+- [Lesson-06 - Sorting](06-Sorting/Lesson-06-Sorting.md)
+- [Lesson-07 - Stacks and Queues](07-Stacks-and-Queues/Lesson-07-Stacks_and_Queues.md)
+- [Lesson-08 - Leader](08-Leader/Lesson-08-Leader.md)
+- [Lesson-09 - Maximum slice problem](09-Maximum-Slice-Problem/Lesson-09-Maximum_slice_problem.md)
+- [Lesson-10 - Prime and composite numbers](10-Prime-and-Composite-Numbers/Lesson-10-Prime_and_composite_numbers.md)
+- [Lesson-11 - Sieve of Eratosthenes](11-Sieve-of-Eratosthenes/Lesson-11-Sieve_of_Eratosthenes.md)
+- [Lesson-12 - Euclidean algorithm](12-Euclidean-Algorithm/Lesson-12-Euclidean_algorithm.md)
+- [Lesson-13 - Fibonacci numbers](13-Fibonacci-Nnumbers/Lesson-13-Fibonacci_numbers.md)
+- [Lesson-14 - Binary search algorithm](14-Binary-Search-Algorithm/Lesson-14-Binary_search_algorithm.md)
+- [Lesson-15 - Caterpillar method](15-Caterpillar-Method/Lesson-15-Caterpillar_method.md)
+- [Lesson-16 - Greedy algorithms](16-Greedy-Algorithms/Lesson-16-Greedy_algorithms.md)
+- [Lesson-17 - Dynamic programming](17-Dynamic-Programming/Lesson-17-Dynamic_programming.md)
+
