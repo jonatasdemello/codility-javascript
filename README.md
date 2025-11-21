@@ -2,14 +2,13 @@
 
 The goal of this project is to show how to solve coding problems using [TDD - Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html).
 
-For this I will use the [Codility Developer Training](https://app.codility.com/programmers/) site lessons.
-Please go ahead and create an account there and start exploring.
+
 
 In the process of learning or during a coding interview, the process (how) is much more important than the result itself.
 If I only needed a solution I could simply Google it or use AI.
 Your final solution may not even be complete, but through multiple iterations it can always be improved.
-There are many ways to solve a problem (as you will see if you look for solutions on the Internet).
-In a real world scenario, the solution may not be easily available, and some exploration and thinking may be necessary.
+There are many ways to solve a problem as you will see if you look for solutions on the Internet.
+In a real world scenario, the solution may not be easily available, and some exploration,  thinking and refactoring may be necessary.
 
 I will take a step-by-step approach showing the steps that any interviewer would like to see, providing explanations along the way.
 In order to solve any problem, you need to understand it first. Then take gradual iterations, sometimes by trial and error, until a solution is achieved.
@@ -26,29 +25,14 @@ Codility also has a timer, which I don't like - so running it locally can be les
 
 ## Lessons
 
-In this page I will only address the first lesson.
-Check each lesson below for more details and other problems.
+For this I will use the [Codility Developer Training](https://app.codility.com/programmers/) site lessons.
+Please go ahead visit the site, create an account there and start exploring the lessons.
 
-- [Lesson-01 - Iterations](01-Iterations/Lesson-01-Iterations.md)
-- [Lesson-02 - Arrays](02-Arrays/Lesson-02-Arrays.md)
-- [Lesson-03 - Time Complexity](03-Time-Complexity/Lesson-03-Time_Complexity.md)
-- [Lesson-04 - Counting Elements](04-Counting-Elements/Lesson-04-Counting_Elements.md)
-- [Lesson-05 - Prefix Sums](05-Prefix-Sums/Lesson-05-Prefix_Sums.md)
-- [Lesson-06 - Sorting](06-Sorting/Lesson-06-Sorting.md)
-- [Lesson-07 - Stacks and Queues](07-Stacks-and-Queues/Lesson-07-Stacks_and_Queues.md)
-- [Lesson-08 - Leader](08-Leader/Lesson-08-Leader.md)
-- [Lesson-09 - Maximum slice problem](09-Maximum-Slice-Problem/Lesson-09-Maximum_slice_problem.md)
-- [Lesson-10 - Prime and composite numbers](10-Prime-and-Composite-Numbers/Lesson-10-Prime_and_composite_numbers.md)
-- [Lesson-11 - Sieve of Eratosthenes](11-Sieve-of-Eratosthenes/Lesson-11-Sieve_of_Eratosthenes.md)
-- [Lesson-12 - Euclidean algorithm](12-Euclidean-Algorithm/Lesson-12-Euclidean_algorithm.md)
-- [Lesson-13 - Fibonacci numbers](13-Fibonacci-Nnumbers/Lesson-13-Fibonacci_numbers.md)
-- [Lesson-14 - Binary search algorithm](14-Binary-Search-Algorithm/Lesson-14-Binary_search_algorithm.md)
-- [Lesson-15 - Caterpillar method](15-Caterpillar-Method/Lesson-15-Caterpillar_method.md)
-- [Lesson-16 - Greedy algorithms](16-Greedy-Algorithms/Lesson-16-Greedy_algorithms.md)
-- [Lesson-17 - Dynamic programming](17-Dynamic-Programming/Lesson-17-Dynamic_programming.md)
-
+Each problem description will be copied here to make it easier to follow.
 
 ## Setup
+
+I assume you have a computer and access to the Internet. A Windows, Linux or MacOS machine and some familiarity with the console (command line or terminal).
 
 ### Tools
 
