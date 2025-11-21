@@ -1,6 +1,6 @@
 'use strict';
 
-const solution = require("./odd-occurrences-In-arrays");
+const solution = require("./odd-occurrences-in-array");
 
 describe('OddOccurrencesInArray Tests', () => {
 
