@@ -67,8 +67,8 @@ Example Walkthrough
 Given X = 10, Y = 85, D = 30:
 
     Distance = 85 - 10 = 75
-    Jumps = ⌈75/30⌉ = ⌈2.5⌉ = 3
-    After 3 jumps: 10 + (3 × 30) = 100 ≥ 85
+    Jumps = 75 / 30 = 2.5 = 3
+    After 3 jumps: 10 + (3 × 30) = 100 >= 85
 
 
 ```js
