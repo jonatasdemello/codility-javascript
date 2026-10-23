@@ -17,18 +17,12 @@ The array contains an odd number of elements, and each element of the array can 
 
 For example, in array A such that:
 
-    A[0] = 9
-    A[1] = 3
-    A[2] = 9
-    A[3] = 3
-    A[4] = 9
-    A[5] = 7
-    A[6] = 9
+    A[0] = 9    A[1] = 3    A[2] = 9    A[3] = 3    A[4] = 9    A[5] = 7    A[6] = 9
 
-    the elements at indexes 0 and 2 have value 9,
-    the elements at indexes 1 and 3 have value 3,
-    the elements at indexes 4 and 6 have value 9,
-    the element at index 5 has value 7 and is unpaired.
+    - the elements at indexes 0 and 2 have value 9,
+    - the elements at indexes 1 and 3 have value 3,
+    - the elements at indexes 4 and 6 have value 9,
+    - the element at index 5 has value 7 and is unpaired.
 
 Write a function:
 
@@ -38,26 +32,19 @@ that, given an array A consisting of N integers fulfilling the above conditions,
 
 For example, given array A such that:
 
-    A[0] = 9
-    A[1] = 3
-    A[2] = 9
-    A[3] = 3
-    A[4] = 9
-    A[5] = 7
-    A[6] = 9
+    A[0] = 9    A[1] = 3    A[2] = 9    A[3] = 3    A[4] = 9    A[5] = 7    A[6] = 9
 
 the function should return 7, as explained in the example above.
 
 Write an efficient algorithm for the following assumptions:
 
-    N is an odd integer within the range [1..1,000,000];
-    each element of array A is an integer within the range [1..1,000,000,000];
-    all but one of the values in A occur an even number of times.
+    - N is an odd integer within the range [1..1,000,000];
+    - each element of array A is an integer within the range [1..1,000,000,000];
+    - all but one of the values in A occur an even number of times.
 
 ---------------------------------------------------------------------------------------------------
 
 ## Problem Analysis
-
 
 
 I will start with the validations:
@@ -106,18 +93,14 @@ It is time to start working on the solution. Validations first.
 
 ```js
 // 02-Arrays/odd-occurrences-in-array.js
-'use strict';
-
-// Find value that occurs in odd number of elements.
-
 module.exports = function solution(A) { // A array
 
-	// each element of array A is an integer within the range [1..1,000,000,000];
-	for (let i = 0; i < A.length; i++) {
-		if (A[i] < 1 || A[i] > 1000000000) {
-			throw new Error("Element A[" + i + "] is invalid!");
-		}
-	}
+  // each element of array A is an integer within the range [1..1,000,000,000];
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] < 1 || A[i] > 1000000000) {
+      throw new Error("Element A[" + i + "] is invalid!");
+    }
+  }
 }
 ```
 
@@ -187,19 +170,19 @@ I can use this to:
 - if exists, then update count = count + 1;
 
 ```js
-	// using map to count occurrences
-	let map = new Map();
-	for (let i = 0; i < A.length; i++) {
+  // using map to count occurrences
+  let map = new Map();
+  for (let i = 0; i < A.length; i++) {
         let element = A[i];
-		let exists = map.get(element);
-		if (exists) {
-			map.set(element, exists + 1);
-		} else {
-			map.set(element, 1);
-		}
-	}
-	//debug:
-	console.log(map);
+    let exists = map.get(element);
+    if (exists) {
+      map.set(element, exists + 1);
+    } else {
+      map.set(element, 1);
+    }
+  }
+  //debug:
+  console.log(map);
 ```
 
 At this point, I have this table stored in a Map data structure:
@@ -222,11 +205,11 @@ For looping over a map, there are 3 methods:
 
 ```js
     // find the element with odd occurrences
-	for (let [key, value] of map) {
-		if (value % 2 !== 0) {
-			return key;
-		}
-	}
+  for (let [key, value] of map) {
+    if (value % 2 !== 0) {
+      return key;
+    }
+  }
 ```
 
 The problem description says that only one element is left unpaired (all but one of the values in A occur an even number of times) so if that element is found, it can be returned as the solution.

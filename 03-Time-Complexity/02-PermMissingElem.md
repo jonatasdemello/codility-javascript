@@ -34,9 +34,9 @@ the function should return 4, as it is the missing element.
 
 Write an efficient algorithm for the following assumptions:
 
-    N is an integer within the range [0..100,000];
-    the elements of A are all distinct;
-    each element of array A is an integer within the range [1..(N + 1)].
+    - N is an integer within the range [0..100,000];
+    - the elements of A are all distinct;
+    - each element of array A is an integer within the range [1..(N + 1)].
 
 ---------------------------------------------------------------------------------------------------
 
@@ -66,8 +66,9 @@ It is better to read the full chapter to understand the process, but the main id
 For example A = [1, 2, 3, 5, 8, 13] can be represented in a bitmap:
 
 ```
-                            1 1 1 1 1 1 1 1 1 1
-index:  0-1-2-3-4-5-6-7-8-9-0-1-2-3-4-5-6-7-8-9
+        0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1
+index:  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
+        | | | | | | | | | | | | | | | | | | | |
 number: 0 1 1 1 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0
           ^ ^ ^   ^     ^         ^
 A = [1, 2, 3, 5, 8, 13]
@@ -83,8 +84,8 @@ B = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 From the problem description:
 
-    A[2, 3, 1, 5]
-    A.length = N = 4
+    A [2, 3, 1, 5]
+    A.length => N = 4
 
 so
 
@@ -96,8 +97,8 @@ so
 The new array is: (index 0 is ignored)
 
 ```
-idx= 0  1  2  3  4  5
-B = [0, 1, 1, 1, 0, 1]
+idx = 0  1  2  3  4  5
+B  = [0, 1, 1, 1, 0, 1]
 ```
 
 so the first missing integer is idx = 4.

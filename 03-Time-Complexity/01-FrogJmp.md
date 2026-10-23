@@ -32,14 +32,14 @@ For example, given:
 
 the function should return 3, because the frog will be positioned as follows:
 
-    after the first jump, at position 10 + 30 = 40
-    after the second jump, at position 10 + 30 + 30 = 70
-    after the third jump, at position 10 + 30 + 30 + 30 = 100
+    - after the first jump, at position 10 + 30 = 40
+    - after the second jump, at position 10 + 30 + 30 = 70
+    - after the third jump, at position 10 + 30 + 30 + 30 = 100
 
 Write an efficient algorithm for the following assumptions:
 
-    X, Y and D are integers within the range [1..1,000,000,000];
-    X ≤ Y.
+    - X, Y and D are integers within the range [1..1,000,000,000];
+    - X <= Y.
 
 ---------------------------------------------------------------------------------------------------
 
@@ -77,11 +77,18 @@ function solution(X, Y, D) {
     const distance = Y - X;
     // Calculate number of jumps needed (round up)
     return Math.ceil(distance / D);
-}
+    // ceil(4.2) = 5
+    // ceil(-2.3) = -2
+
 // or
+
 function solutionInt(X, Y, D) {
+    // Calculate the distance to cover
     const distance = Y - X;
+    // Calculate number of jumps needed (round down)
     return Math.floor((distance + D - 1) / D);
     // or: return Math.floor(distance / D) + (distance % D > 0 ? 1 : 0);
+    // floor(4.2) == 4
+    // floor(-2.3) == -3
 }
 ```

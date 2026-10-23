@@ -32,8 +32,8 @@ For example, consider array A such that:
 We can split this tape in four places:
 
     P = 1, difference = |3 − 10| = 7
-    P = 2, difference = |4 − 9| = 5
-    P = 3, difference = |6 − 7| = 1
+    P = 2, difference = |4  − 9| = 5
+    P = 3, difference = |6  − 7| = 1
     P = 4, difference = |10 − 3| = 7
 
 Write a function:

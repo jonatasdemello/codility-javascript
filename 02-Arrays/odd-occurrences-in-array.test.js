@@ -9,9 +9,7 @@ describe('OddOccurrencesInArray Tests', () => {
     // arrange
     const A = [0, -1, 10, 5000000000, 1000000001]; // invalid values
     // act & assert
-    expect(() => {
-      solution(A)
-    }).toThrow();
+    expect(() => { solution(A) }).toThrow();
   });
 
   // test case to rotate A[1,2,3,4,5] K=2 return should be A[4,5,1,2,3]

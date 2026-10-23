@@ -10,9 +10,7 @@ https://app.codility.com/programmers/lessons/2-arrays/
 
 # Cyclic Rotation
 
-    Given the problem description:
-
-Rotate an array to the right by a given number of steps.
+    Rotate an array to the right by a given number of steps.
 
 An array A consisting of N integers is given.
 Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place.
@@ -53,8 +51,8 @@ Given
 
 Assume that:
 
-    N and K are integers within the range [0..100];
-    each element of array A is an integer within the range [−1,000..1,000].
+    - N and K are integers within the range [0..100];
+    - each element of array A is an integer within the range [−1,000..1,000].
 
 In your solution, focus on correctness.
 The performance of your solution will not be the focus of the assessment.
@@ -93,28 +91,24 @@ The following test is to check if each element of the array is within the range 
       solution(new Array(1), 101)
     }).toThrow("Parameter K is invalid!");
 
-    // N: number of elements in A[] = less than 0 or greater than 100
-    // an array cannot have less than 0 elements, so we skip that test
+    // N: number of elements in A[] not less than 0 or greater than 100
+    //    an array cannot have less than 0 elements, so we can skip this test
+    //    an array with more than 100 elements, check this
     expect(() => {
       solution(new Array(150), 5)
-    }).toThrow();
+    }).toThrow("Number of elements in A[] is invalid!");
   });
 
   // each element of array A is an integer within the range [−1,000..1,000].
   test('each element of array A is an integer within the range [-1,000..1,000].', () => {
     // arrange
-    const N = 5;
+    const A = [0, 500, 1000, 1500, 2000]; // 1500 and 2000 are invalid
     const K = 3;
-    const A = [];
-    // values added are A[0, 500, 1000, 1500, 2000]
-    for (let i = 0; i < N; i++) {
-      A.push(i * 500);
-    }
 
     // act & assert
     expect(() => {
       solution(A, K)
-    }).toThrow();
+    }).toThrow("Element A[3] is invalid!");
 
   });
 ```
@@ -125,7 +119,7 @@ The next test will be to test one valid input array and the correct result expec
 
 I can start with a basic rotation:
 
-    input: A = [1, 2, 3]
+    input:  A = [1, 2, 3]
     rotation: K = 1
     output: A = [2, 3, 1]
 
@@ -256,11 +250,13 @@ OK, so if I want to do it K times, here is the code I added to my `cyclic-rotati
 
 ```js
 // cyclic-rotation.js
-
+function solution(A, K) {
     for (let i = 0; i < K; i++) {
-    let item = A.pop();
-    A.unshift(item);
+      let item = A.pop();
+      A.unshift(item);
     }
+  return A;
+}
 ```
 
 and run the tests again:
@@ -354,15 +350,18 @@ So if K > A.length, then use (K MOD A.length)
 The first improvement I can do is:
 
 ```js
+function solution(A, K) {
     let N = A.length;
     // if K > N, we can reduce the number of rotations
     if (K > N) {
-    K = K % N;
+      K = K % N;
     }
     for (let i = 0; i < K; i++) {
-    let item = A.pop();
-    A.unshift(item);
+      let item = A.pop();
+      A.unshift(item);
     }
+    return result;
+}
 ```
 
 And run the tests again. Tests pass! This is the beauty of TDD and Unit Tests - I can make changes to my code and see it still returns the correct results.
@@ -418,21 +417,23 @@ Flip and join: [3, 4, 5] + [1, 2]
 R is the "rotation point".
 
 ```js
-// if K is bigger than the array size, the use the remainder
-if (K > A.length) {
-    K = K % A.length;
+function solution(A, K) {
+  // if K is bigger than the array size, the use the remainder
+  if (K > A.length) {
+      K = K % A.length;
+  }
+
+  // calculate where to split
+  let R = A.length - K; // from end the until the split point
+
+  // split the array:
+  let arrLeft = A.slice(0, R); // from start to R
+  let arrRight = A.slice(R, A.length); // from R to end
+
+  // merge new array: R .. L
+  let result = arrRight.concat(arrLeft);
+  return result;
 }
-
-// calculate where to split
-let R = A.length - K; // from end the until the split point
-
-// split the array:
-let arrLeft = A.slice(0, R); // from start to R
-let arrRight = A.slice(R, A.length); // from R to end
-
-// merge new array: R .. L
-let result = arrRight.concat(arrLeft);
-return result;
 ```
 
 **Document** about Arrays from the [MDN documentation site](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice):
@@ -503,13 +504,15 @@ i = 10 mod 5 =  0
 Here is the code:
 
 ```js
-    // rotate the array
-    let N = A.length;
-    for (let i = 0; i < N; i++) {
+function solution(A, K) {
+  // rotate the array
+  let N = A.length;
+  for (let i = 0; i < N; i++) {
     let newIndex = (i + K) % N;
     result[newIndex] = A[i];
-    }
-    return result;
+  }
+  return result;
+}
 ```
 
 run the tests again
@@ -529,3 +532,6 @@ Tests:       6 passed, 6 total
 Snapshots:   0 total
 Time:    0.713 s, estimated 1 s
 ```
+
+There are 3 solutions in the `cyclic-rotation.js` code, take a look and see the differences.
+

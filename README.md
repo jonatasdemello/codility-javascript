@@ -74,6 +74,15 @@ Or to show more information:
 
 `npm run test -- --verbose`
 
+Here's how to run Jest on files matching my-test,
+
+`npx jest my-test`
+
+or
+
+`npx jest path/to/my-test.js`
+
+
 Next, create sub-folders, one for each lesson (to make it easy to find and keep it organized):
 
 ```bash
@@ -124,8 +133,10 @@ The other file is the test suite for this problem called **"solution-template.te
 
 const solution = require("./solution-template");
 
+// Test Suite
 describe('solution-template tests', () => {
 
+  // Unit Test
   test('given 1 should return 1.', () => {
     expect(solution(X)).toBe(Y);
   });

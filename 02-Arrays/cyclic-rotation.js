@@ -17,7 +17,7 @@ module.exports = function solution(A, K, version = 1) { // A array, K integer
 	// N: number of elements in A[];
 	let N = A.length;
 	if (N < 0 || N > 100) {
-		throw new Error("Parameter N is invalid!");
+		throw new Error("Number of elements in A[] is invalid!");
 	}
 
 	// each element of array A is an integer within the range [-1,000..1,000].

@@ -7,14 +7,19 @@
     "testw": "jest --watchAll --verbose",
     "testv": "jest --verbose"
   },
-  "engines" : {
-    "node" : ">=8.0.0"
+  "engines": {
+    "node": ">=8.0.0"
   },
-  "keywords": ["codility training", "tdd", "javascript"],
+  "keywords": [
+    "codility training",
+    "tdd",
+    "javascript"
+  ],
   "author": "jonatas",
   "license": "ISC",
   "description": "Practicing Codility lessons using TDD.",
   "devDependencies": {
+    "baseline-browser-mapping": "^2.11.31",
     "jest": "^30.2.0"
   }
 }

@@ -16,7 +16,7 @@ A binary gap within a positive integer N is any maximal sequence of consecutive 
 
 For example,
 
-- number 9 has binary representation 1001 and contains a binary gap of length 2.
+- The number 9 has binary representation 1001 and contains a binary gap of length 2.
 - The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3.
 - The number 20 has binary representation 10100 and contains one binary gap of length 1.
 - The number 15 has binary representation 1111 and has no binary gaps.
@@ -32,52 +32,23 @@ The function should return 0 if N doesn't contain a binary gap.
 
 For example,
 
-- given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
-- Given N = 32 the function should return 0, because N has binary representation '100000' and thus no binary gaps.
+    - Given N = 1041 the function should return 5,
+        because N has binary representation 10000010001
+        and so its longest binary gap is of length 5.
+
+    - Given N = 32 the function should return 0,
+        because N has binary representation '100000'
+        AND thus no binary gaps.
 
 Write an efficient algorithm for the following assumptions:
 
-    N is an integer within the range [1..2,147,483,647].
+    - N is an integer within the range [1..2,147,483,647].
 
 ---------------------------------------------------------------------------------------------------
 
 ## Solution
 
-
-**BinaryGap**
-
-Find longest sequence of zeros in binary representation of an integer.
-
-A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
-
-For example,
-
-- number 9 has binary representation 1001 and contains a binary gap of length 2.
-- The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3.
-- The number 20 has binary representation 10100 and contains one binary gap of length 1.
-- The number 15 has binary representation 1111 and has no binary gaps.
-- The number 32 has binary representation 100000 and has no binary gaps.
-
-Write a function:
-
-    function solution(N);
-
-that, given a positive integer N, returns the length of its longest binary gap.
-
-The function should return 0 if N doesn't contain a binary gap.
-
-For example,
-
-- given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
-- Given N = 32 the function should return 0, because N has binary representation '100000' and thus no binary gaps.
-
-Write an efficient algorithm for the following assumptions:
-
-    N is an integer within the range [1..2,147,483,647].
-
--------------------
-
-## Logical Thinking in Programming
+### Logical Thinking in Programming
 
 Before starting to write a solution for any problem it is necessary to better understand it first.
 Many junior developers or people new to code fail in this step.
@@ -116,6 +87,8 @@ Some numbers have more than one gap and some have none.
 +--------+-----------------------+------------+--------+
 | Number | Binary Representation | Binary Gap | Result |
 +--------+-----------------------+------------+--------+
+|      0 |                  0000 | 0          |      0 |
+|      1 |                  0001 | 0          |      0 |
 |      9 |                  1001 | 2          |      2 |
 |    529 |            1000010001 | 4 & 3      |      4 |
 |     20 |                 10100 | 1          |      1 |
@@ -155,14 +128,14 @@ const solution = require("./binary-gap");
 
 describe('BinaryGap Tests', () => {
 
-  test('given 1 should return 1.', () => {
-    expect(solution(1)).toBe(1);
+  test('given 1 should return 0.', () => {
+    expect(solution(1)).toBe(0);
   });
 
 });
 ```
 
-Now I can start writing unit tests and solution code.
+Now I can start writing the unit tests and the solution code.
 
 ## Adding Unit Tests First
 
@@ -188,16 +161,14 @@ Start with the requirements from the problem description:
 
 
 
-The test syntax is pretty straightforward, but in doubt check the [Jest documentation](https://jestjs.io/docs/getting-started).
+The Jest unit test code syntax is pretty straightforward, but in doubt check the [Jest documentation](https://jestjs.io/docs/getting-started).
 
 The problem description does not say anything about errors, so I will assume that an invalid parameter will throw an error.
 
 The first tests will cover boundaries and invalid numbers from this statement in the problem description:
 
 
-
 >  N is an integer within the range [1 .. 2,147,483,647].
-
 
 
 ```js
@@ -210,23 +181,17 @@ describe('BinaryGap Tests', () => {
 
   // valid input: negative number
   test('Given -1 should throw an error.', () => {
-    expect(() => {
-      solution(-1);
-    }).toThrow();
+    expect(() => solution(-1)).toThrow();
   });
 
   // valid input: zero
   test('Given 0 should throw an error.', () => {
-    expect(() => {
-      solution(0);
-    }).toThrow();
+    expect(() => solution(0)).toThrow();
   });
 
   // valid input: big number
   test('Given 2,147,483,648 should throw an error.', () => {
-    expect(() => {
-      solution(2147483648);
-    }).toThrow();
+    expect(() => solution(2147483648)).toThrow();
   });
 
   // valid input boundary: 1
@@ -283,7 +248,7 @@ Lets check some other numbers. These will be valid input numbers that should ret
 
 In the test name, I added the converted binary number inside the backets to make it easier to understand: 9 decimal = [1001] binary.
 
-Like this: 'Given 9 [1001] should return 2.'
+    Like this: 'Given 9 [1001] should return 2.'
 
 Here are the unit tests:
 
@@ -370,7 +335,7 @@ First, for this statement in the problem description:
 
 
 
->  N is an integer within the range [1 .. 2,147,483,647].
+    N is an integer within the range [1 .. 2,147,483,647].
 
 
 
@@ -420,12 +385,14 @@ Next, I will start the problem/solution logic.
 
 ----
 
+### Numerical representation
+
 The first thing to consider is that my input number is a decimal number.
 I need to convert it to its binary representation.
 
 In JavaScript, the simplest and most common method to convert a decimal number to its binary representation is by using the built-in toString() method with a radix of 2.
 
-See Javascript Number.prototype.toString() reference at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+See the Javascript `Number.prototype.toString()` reference at [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 
 ```js
 // `binary-gap.js`
@@ -507,6 +474,8 @@ Note that I added the `console.log(bin);` after the conversion.
 The reason for that is to see what the result of the decimal to binary conversion is.
 This is important because depending on the language or the result returned from the binary conversion function, I may need to remove the trailing zeros (they can be discarded).
 
+```
++-----+--------+-----------+
 | dec | bin    | bytes     |
 | --- | ------ | --------- |
 | 1   | 1      | 0001      |
@@ -514,6 +483,8 @@ This is important because depending on the language or the result returned from 
 | 7   | 111    | 0111      |
 | 9   | 1001   | 1001      |
 | 32  | 100000 | 0010.0000 |
++-----+--------+-----------+
+```
 
 **Note:**
 
@@ -547,16 +518,18 @@ I added a new variable `zeros = 0` to hold the count of 0's.
 After the loop, I need to assign `maxGap = zeros;` because I return `maxGap`.
 
 ```js
-    let maxGap = -1;
-    let zeros = 0;
-    // now iterate over the 0's and 1's and count
-    for (var x = 0; x < bin.length; x++) {
+module.exports = function solution(N) {
+  let maxGap = -1;
+  let zeros = 0;
+  // now iterate over the 0's and 1's and count
+  for (var x = 0; x < bin.length; x++) {
     if (bin[x] == 0) {
         zeros++;
     }
-    }
-    maxGap = zeros;
-    return maxGap;
+  }
+  maxGap = zeros;
+  return maxGap;
+}
 ```
 
 Run the tests again:
@@ -587,21 +560,23 @@ To fix that I will need to modify my main loop and add some more checks.
 I need to check for 1's too (closing gap).
 
 ```js
-    // now iterate over the 0's and 1's and count
-    for (var x = 0; x < bin.length; x++) {
+module.exports = function solution(N) {
+  // now iterate over the 0's and 1's and count
+  for (var x = 0; x < bin.length; x++) {
     if (bin[x] == 0) { // means that there is gap
-        zeros++;
+      zeros++;
     }
     if (bin[x] == 1) { // means that the gap ended
-        // if the gap ended, check if this is biggest found
-        if (zeros > maxGap) {
+      // if the gap ended, check if this is biggest found
+      if (zeros > maxGap) {
         maxGap = zeros;
-        }
-        // reset the zero counter
-        zeros = 0;
+      }
+      // reset the zero counter
+      zeros = 0;
     }
-    }
-    return maxGap;
+  }
+  return maxGap;
+}
 ```
 
 Run the tests again:
@@ -696,7 +671,7 @@ Sometimes, when working on a problem it is better to use **Pseudocode** to think
 
 Something like this:
 
-<pre>
+```js
   let maxGap = 0; // max gap found
   let zeros = 0; // zero counter
 
@@ -728,6 +703,6 @@ Something like this:
     end if
   next x
   return maxGap
-</pre>
+```
 
-Then it is easier later to find the correct syntax for the language I am using.
+Then it is easier to find the correct syntax for the language I am using later.
